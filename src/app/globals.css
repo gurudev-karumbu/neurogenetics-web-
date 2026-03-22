@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-primary: #1a2a6c;
+  --color-primary-light: #2d3f8f;
+  --color-accent: #b21f1f;
+  --color-gold: #fdbb2d;
+  --color-teal: #0d9488;
+  --color-teal-light: #14b8a6;
+}
+
+:root {
+  --primary: #1a2a6c;
+  --primary-light: #2d3f8f;
+  --accent: #b21f1f;
+  --gold: #fdbb2d;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
+  --bg: #f8f9fc;
+  --surface: #ffffff;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --primary: #4f6fd4;
+  --primary-light: #6b87e8;
+  --accent: #e05252;
+  --gold: #fdbb2d;
+  --teal: #2dd4bf;
+  --teal-light: #5eead4;
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --text: #e8eaf0;
+  --muted: #9ca3af;
+  --card-bg: #1e2230;
+  --border: #2d3148;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ── 4D Model Animation ───────────────────────────────────────── */
+.fourd-ring {
+  animation: rotate-ring 20s linear infinite;
+}
+.fourd-ring-reverse {
+  animation: rotate-ring 25s linear infinite reverse;
+}
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fourd-quadrant {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.fourd-quadrant:hover {
+  filter: brightness(1.15);
+  transform: scale(1.03);
+}
+
+/* ── Glassmorphism cards ──────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(26, 42, 108, 0.08);
+}
+.dark .glass-card {
+  background: rgba(30, 34, 48, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Gold underline heading ───────────────────────────────────── */
+.heading-underline::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 8px;
+}
+.heading-underline-center::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 8px auto 0;
+}
+
+/* ── Prose for blog content ───────────────────────────────────── */
+.prose-neurogenetics h1,
+.prose-neurogenetics h2,
+.prose-neurogenetics h3 {
+  color: var(--primary);
+  font-weight: 700;
+}
+.prose-neurogenetics h2 {
+  border-left: 4px solid var(--gold);
+  padding-left: 12px;
+  margin-top: 2rem;
+}
+.prose-neurogenetics a {
+  color: var(--teal);
+  text-decoration: underline;
+}
+.prose-neurogenetics blockquote {
+  border-left: 4px solid var(--teal);
+  background: rgba(13, 148, 136, 0.05);
+  padding: 12px 16px;
+  color: var(--primary);
+  font-style: italic;
+}

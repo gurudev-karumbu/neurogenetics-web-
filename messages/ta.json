@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "mind": "Mind — Psychology",
+    "neuro": "Neuro — Brain Science",
+    "body": "Body — Functional Medicine",
+    "energy": "Energy — Bioenergetics"
+  },
+  "hero": {
+    "badge": "Integrative Mental Health — Malaysia",
+    "heading1": "Heal at Every Level.",
+    "heading2": "Mind. Neuro. Body. Energy.",
+    "subtext": "The Neuro-Genetics 4D Model addresses mental health across four interconnected dimensions — because true healing cannot come from treating just one layer.",
+    "bookCta": "Book a Consultation",
+    "exploreCta": "Explore the 4D Model"
+  },
+  "model": {
+    "title": "The Neuro-Genetics 4D Model",
+    "subtitle": "Mental health challenges rarely arise from a single cause. Our model examines all four dimensions simultaneously — click each to discover how they interact.",
+    "selectPrompt": "Select a dimension to explore how we address your wellbeing"
+  },
+  "services": {
+    "title": "Our Services",
+    "learnMore": "Learn more →",
+    "mind": {
+      "title": "Mind",
+      "sub": "Psychology & Therapy",
+      "desc": "Hypnotherapy, psychotherapy, and psychological assessments for anxiety, depression, and emotional wellbeing."
+    },
+    "neuro": {
+      "title": "Neuro",
+      "sub": "Brain Science",
+      "desc": "QEEG brain mapping and neurofeedback therapy to retrain brainwave patterns for lasting mental clarity."
+    },
+    "body": {
+      "title": "Body",
+      "sub": "Functional Medicine",
+      "desc": "Functional nutrition, hormone testing, and physiological root-cause analysis of mental health challenges."
+    },
+    "energy": {
+      "title": "Energy",
+      "sub": "Bioenergetics",
+      "desc": "Bio-Well and Cell Wellbeing assessments addressing chakra and meridian imbalances subtly and professionally."
+    }
+  },
+  "why": {
+    "title": "Why Integrative Care?",
+    "para1": "A thyroid imbalance can cause depression. A disrupted cortisol cycle can trigger anxiety. Unresolved trauma can rewire brainwave patterns. Treating only the symptoms — with medication or therapy alone — misses the deeper picture.",
+    "para2": "The Neuro-Genetics 4D Model evaluates all four dimensions simultaneously, identifying the root causes — not just the surface symptoms — so that recovery is complete, lasting, and truly yours.",
+    "stat1": "Integrated Dimensions",
+    "stat2": "Conditions Addressed",
+    "stat3": "Avg. Anxiety Recovery",
+    "stat4": "Comprehensive Assessment"
+  },
+  "testimonials": {
+    "title": "Client Experiences"
+  },
+  "cta": {
+    "title": "Ready to Begin Your Healing Journey?",
+    "subtitle": "A comprehensive 4D assessment is the first step to understanding what is truly driving your mental health challenges.",
+    "button": "Book Your Consultation Today"
+  },
+  "footer": {
+    "tagline": "Integrative mental health using the Neuro-Genetics 4D Model — Mind, Neuro, Body & Energy.",
+    "location": "Malaysia",
+    "byAppointment": "By appointment only",
+    "services": "Services",
+    "quickLinks": "Quick Links",
+    "aboutPrabhu": "About Prabhu",
+    "blogResources": "Blog & Resources",
+    "copyright": "© {year} Neurogenetics.my. All rights reserved.",
+    "disclaimer": "The information on this website is for educational purposes only and does not constitute medical advice. Always consult a qualified professional."
+  }
+}
