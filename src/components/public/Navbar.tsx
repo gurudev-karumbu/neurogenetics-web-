@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import LangSwitcher from './LangSwitcher';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -85,8 +86,11 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Theme toggle + Mobile toggle */}
+          {/* Lang + Theme toggle + Mobile toggle */}
           <div className="flex items-center gap-1">
+            <div className="hidden md:flex">
+              <LangSwitcher />
+            </div>
             <ThemeToggle />
             <button
               className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
