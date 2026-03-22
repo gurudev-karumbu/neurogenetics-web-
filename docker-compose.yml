@@ -4,11 +4,12 @@ services:
     build: .
     restart: unless-stopped
     env_file: .env.local
+    ports:
+      - "7000:7000"
     volumes:
       - blog_content:/app/content/blogs
     networks:
       - web
-    # Not exposed directly — nginx proxies to it
 
   nginx:
     image: nginx:alpine
