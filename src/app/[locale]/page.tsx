@@ -124,9 +124,9 @@ export default function HomePage() {
 
       {/* ── Conditions scroll banner ───────────────────────────────────────── */}
       <section className="py-3 border-b border-gray-100 dark:border-teal-900/30 bg-white dark:bg-[#070d1a] overflow-hidden transition-colors">
-        <div className="flex gap-8 px-4">
-          {CONDITIONS.map((c) => (
-            <span key={c} className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
+        <div className="flex w-max animate-marquee gap-8">
+          {[...CONDITIONS, ...CONDITIONS].map((c, i) => (
+            <span key={i} className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
               <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-teal-500" />
               {c}
             </span>
