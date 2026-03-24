@@ -89,11 +89,26 @@ export default function HomePage() {
               <p className="text-yellow-200/80 text-sm md:text-base font-medium mb-4 mx-auto lg:mx-0 max-w-xl">
                 True mental wellbeing starts with understanding your brain, body, and beyond.
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5">
                 Heal at Every Level.
-                <br />
-                <span className="text-yellow-400">Mind. Brain. Body. Bio-Resonance.</span>
               </h1>
+              <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
+                {[
+                  { label: 'Mind',          icon: '🧠', color: '#818cf8' },
+                  { label: 'Brain',         icon: '⚡', color: '#2dd4bf' },
+                  { label: 'Body',          icon: '🔬', color: '#e05252' },
+                  { label: 'Bio-Resonance', icon: '✨', color: '#a855f7' },
+                ].map((d) => (
+                  <span
+                    key={d.label}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-bold border-2"
+                    style={{ color: d.color, borderColor: `${d.color}70`, background: `${d.color}22` }}
+                  >
+                    <span>{d.icon}</span>
+                    {d.label}
+                  </span>
+                ))}
+              </div>
               <p className="text-lg text-blue-200 max-w-xl mb-10 leading-relaxed mx-auto lg:mx-0">
                 The <strong className="text-white">Neuro-Genetics 4D Model</strong> addresses mental health
                 across four interconnected dimensions — because true healing cannot come from treating just one layer.
