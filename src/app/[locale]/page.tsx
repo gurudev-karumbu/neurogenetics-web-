@@ -83,30 +83,30 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 py-16 md:py-20">
             {/* Text */}
             <div className="flex-1 text-center lg:text-left text-white">
-              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full font-bold mb-4 text-sm md:text-base bg-yellow-400/25 text-yellow-300 border border-yellow-400/50 tracking-wide">
-                ✦ Integrative Mental Health — Malaysia
-              </div>
-              <p className="text-yellow-200/80 text-sm md:text-base font-medium mb-4 mx-auto lg:mx-0 max-w-xl">
-                True mental wellbeing starts with understanding your brain, body, and beyond.
+              <p className="text-yellow-300 text-xs font-semibold tracking-[0.2em] uppercase mb-2 mx-auto lg:mx-0">
+                Malaysia&rsquo;s Premier
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5">
-                Heal at Every Level.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
+                <span className="text-yellow-400">Integrative</span>{' '}
+                <span className="text-yellow-400">Mental Health</span>
+                <br />
+                <span className="text-white">Centre</span>
               </h1>
-              <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
+              <div className="grid grid-cols-2 gap-3 mb-8 max-w-sm mx-auto lg:mx-0">
                 {[
-                  { label: 'Mind',          icon: '🧠', color: '#818cf8' },
-                  { label: 'Brain',         icon: '⚡', color: '#2dd4bf' },
-                  { label: 'Body',          icon: '🔬', color: '#e05252' },
-                  { label: 'Bio-Resonance', icon: '✨', color: '#a855f7' },
+                  { label: 'Mind',          sub: 'Psychology & Therapy',      icon: '🧠', color: '#818cf8' },
+                  { label: 'Brain',         sub: 'QEEG & Neurofeedback',       icon: '⚡', color: '#2dd4bf' },
+                  { label: 'Body',          sub: 'Functional Medicine',        icon: '🔬', color: '#e05252' },
+                  { label: 'Bio-Resonance', sub: 'Resonance & Frequency',      icon: '✨', color: '#a855f7' },
                 ].map((d) => (
-                  <span
+                  <div
                     key={d.label}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-base font-bold border-2"
-                    style={{ color: d.color, borderColor: `${d.color}70`, background: `${d.color}22` }}
+                    className="flex flex-col gap-0.5 px-4 py-3 rounded-xl border-2"
+                    style={{ color: d.color, borderColor: `${d.color}60`, background: `${d.color}18` }}
                   >
-                    <span>{d.icon}</span>
-                    {d.label}
-                  </span>
+                    <span className="flex items-center gap-1.5 font-bold text-sm">{d.icon} {d.label}</span>
+                    <span className="text-xs opacity-75">{d.sub}</span>
+                  </div>
                 ))}
               </div>
               <p className="text-lg text-blue-200 max-w-xl mb-10 leading-relaxed mx-auto lg:mx-0">
