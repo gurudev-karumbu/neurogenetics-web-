@@ -18,8 +18,8 @@ const DIMENSIONS = [
   },
   {
     id: 'neuro',
-    label: 'Neuro',
-    subtitle: 'Brain Science',
+    label: 'Brain',
+    subtitle: 'Brain Science & QEEG',
     color: '#2dd4bf',
     lightColor: '#e0f5f3',
     darkColor: 'rgba(45,212,191,0.15)',
@@ -44,16 +44,16 @@ const DIMENSIONS = [
   },
   {
     id: 'energy',
-    label: 'Energy',
-    subtitle: 'Bioenergetics',
+    label: 'Bio-Resonance',
+    subtitle: 'Resonance & Frequency',
     color: '#a855f7',
     lightColor: '#f0ebfe',
     darkColor: 'rgba(168,85,247,0.15)',
     icon: '✨',
     href: '/services/energy',
-    services: ['Bio-Well Analysis', 'Cell Wellbeing Assessment', 'Chakra & Meridian Balancing'],
+    services: ['Bio-Well Analysis', 'Cell Wellbeing Assessment', 'Resonance & Frequency Mapping'],
     description:
-      'Subtle energy assessment using Bio-Well and Cell Wellbeing technology, evaluating meridian systems and energetic balance for whole-person wellness.',
+      'Bio-resonance and frequency-based assessment using Bio-Well and Cell Wellbeing technology to evaluate energetic patterns and whole-person balance.',
   },
 ];
 

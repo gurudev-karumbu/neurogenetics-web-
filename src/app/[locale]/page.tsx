@@ -16,8 +16,8 @@ const SERVICES = [
   },
   {
     icon: '⚡',
-    title: 'Neuro',
-    sub: 'Brain Science',
+    title: 'Brain',
+    sub: 'Brain Science & QEEG',
     color: '#0d9488',
     lightClass: 'bg-teal-50 dark:bg-teal-950/40',
     href: '/services/neuro',
@@ -34,12 +34,12 @@ const SERVICES = [
   },
   {
     icon: '✨',
-    title: 'Energy',
-    sub: 'Bioenergetics',
+    title: 'Bio-Resonance',
+    sub: 'Resonance & Frequency',
     color: '#a855f7',
     lightClass: 'bg-purple-50 dark:bg-purple-950/40',
     href: '/services/energy',
-    desc: 'Bio-Well and Cell Wellbeing assessments addressing chakra and meridian imbalances subtly and professionally.',
+    desc: 'Bio-Well and Cell Wellbeing assessments using resonance and frequency analysis to address energetic imbalances.',
   },
 ];
 
@@ -83,13 +83,16 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 py-16 md:py-20">
             {/* Text */}
             <div className="flex-1 text-center lg:text-left text-white">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 bg-yellow-400/20 text-yellow-300 border border-yellow-400/40">
-                Integrative Mental Health — Malaysia
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full font-bold mb-4 text-sm md:text-base bg-yellow-400/25 text-yellow-300 border border-yellow-400/50 tracking-wide">
+                ✦ Integrative Mental Health — Malaysia
               </div>
+              <p className="text-yellow-200/80 text-sm md:text-base font-medium mb-4 mx-auto lg:mx-0 max-w-xl">
+                True mental wellbeing starts with understanding your brain, body, and beyond.
+              </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Heal at Every Level.
                 <br />
-                <span className="text-yellow-400">Mind. Neuro. Body. Energy.</span>
+                <span className="text-yellow-400">Mind. Brain. Body. Bio-Resonance.</span>
               </h1>
               <p className="text-lg text-blue-200 max-w-xl mb-10 leading-relaxed mx-auto lg:mx-0">
                 The <strong className="text-white">Neuro-Genetics 4D Model</strong> addresses mental health
@@ -131,6 +134,56 @@ export default function HomePage() {
               {c}
             </span>
           ))}
+        </div>
+      </section>
+
+      {/* ── Why Brain Imaging? ────────────────────────────────────────────── */}
+      <section className="py-16 bg-gradient-to-br from-[#0d1b2e] to-[#0f2a3a] text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 bg-teal-400/20 text-teal-300 border border-teal-400/30">
+              The Brain-First Approach
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Why Brain Imaging Changes Everything
+            </h2>
+            <p className="text-blue-200 max-w-2xl mx-auto text-sm leading-relaxed">
+              Mental health comes from how the brain functions. When the brain is not working optimally,
+              thoughts and emotions are affected — yet most approaches never look at the brain directly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: '🧬',
+                title: 'Traditional Psychiatry',
+                body: 'Relies on symptoms and labels. Assumes everyone with the same diagnosis is the same — so treatment becomes trial and error, often guesswork.',
+                accent: '#e05252',
+              },
+              {
+                icon: '📡',
+                title: 'QEEG Brain Mapping',
+                body: 'We measure your brain directly using Quantitative EEG — seeing exactly which regions are over- or under-active and how your unique brain is wired.',
+                accent: '#2dd4bf',
+              },
+              {
+                icon: '🎯',
+                title: 'Personalised Treatment',
+                body: 'Because every brain is different, your therapy plan is built around your actual brain data — not just your symptoms. Precision healing, not guesswork.',
+                accent: '#fdbb2d',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="rounded-2xl p-6 border border-white/10 bg-white/5 backdrop-blur"
+                style={{ borderTopColor: card.accent, borderTopWidth: 3 }}
+              >
+                <div className="text-3xl mb-3">{card.icon}</div>
+                <h3 className="font-bold text-base mb-2" style={{ color: card.accent }}>{card.title}</h3>
+                <p className="text-sm text-blue-200 leading-relaxed">{card.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

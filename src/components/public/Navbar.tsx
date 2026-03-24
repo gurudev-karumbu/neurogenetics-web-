@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LangSwitcher from './LangSwitcher';
@@ -11,9 +12,9 @@ const NAV_LINKS = [
     label: 'Services',
     children: [
       { href: '/services/mind', label: 'Mind — Psychology' },
-      { href: '/services/neuro', label: 'Neuro — Brain Science' },
+      { href: '/services/neuro', label: 'Brain — Brain Science' },
       { href: '/services/body', label: 'Body — Functional Medicine' },
-      { href: '/services/energy', label: 'Energy — Bioenergetics' },
+      { href: '/services/energy', label: 'Bio-Resonance & Frequency' },
     ],
   },
   { href: '/about', label: 'About' },
@@ -30,14 +31,19 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span
-              className="text-xl font-bold"
-              style={{ color: 'var(--primary)' }}
-            >
-              Neuro
-              <span style={{ color: 'var(--teal)' }}>genetics</span>
-              <span style={{ color: 'var(--gold)' }}>.my</span>
+          <Link href="/" className="flex items-center gap-1.5">
+            <div className="rounded-lg overflow-hidden flex-shrink-0" style={{ background: '#0d1b2e' }}>
+              <Image
+                src="/images/logo.png"
+                alt="Neuro-Genetics logo"
+                width={52}
+                height={57}
+                className="block"
+                priority
+              />
+            </div>
+            <span className="text-base font-bold hidden sm:inline" style={{ color: 'var(--primary)' }}>
+              Neuro<span style={{ color: 'var(--teal)' }}>genetics</span><span style={{ color: 'var(--gold)' }}>.my</span>
             </span>
           </Link>
 
