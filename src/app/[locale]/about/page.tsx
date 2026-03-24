@@ -4,14 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const QUALIFICATIONS = [
-  { label: 'PhD in Transpersonal Psychology (in progress)', org: 'University of Sedona, USA' },
+  { label: 'Doctor of Philosophy (PhD) — Psychology', org: 'University of Sedona, USA (2019–2024)' },
+  { label: 'Practitioner Diploma — Clinical Hypnosis', org: 'LCCH International (2011–2012)' },
+  { label: 'Certificate — Neuro Linguistic Programming (NLP)', org: 'LCCH International (2014)' },
+  { label: 'Practitioner Certificate — Cognitive Science', org: 'The Academy for Modern Applied Psychology (Achology)' },
+  { label: 'Certified NLP Practitioner, IGNLP (UK)', org: 'Professional Member (UK)' },
+  { label: 'Certified Neuro-Psychology', org: '' },
+  { label: 'HRD Corp Certified Trainer', org: '' },
   { label: 'Life Member', org: 'Malaysian Practitioners of Hypnotherapy Association' },
   { label: 'Life Member', org: 'United States Board of Clinical Hypnotherapy (USBCH)' },
   { label: 'Life Member', org: 'Persatuan Kaunselor Pendidikan Malaysia (PEKA)' },
   { label: 'Member', org: 'Achology — Applied Modern Psychology, UK' },
-  { label: 'Certified NLP Practitioner, IGNLP (UK)', org: 'Professional Member (UK)' },
-  { label: 'Certified Neuro-Psychology', org: '' },
-  { label: 'HRD Corp Certified Trainer', org: '' },
 ];
 
 const EXPERTISE = [
@@ -83,17 +86,20 @@ export default function AboutPage() {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-3">Prabhu Sithamparam</h1>
               <p className="text-teal-300 font-semibold text-lg mb-5">Co-founder of Neuro-Genetics</p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-blue-200 mb-6">
-                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> 12+ years Training &amp; Business Development</span>
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-sm text-blue-200 mb-6">
+                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> 20+ years in Health, Wellness &amp; Fitness</span>
                 <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> 9+ years Clinical Psychotherapy</span>
-                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> PhD Candidate, Transpersonal Psychology</span>
+                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> PhD in Psychology, University of Sedona</span>
+                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> Clinical Hypnotherapist &amp; Genetic Brain Profiling Expert</span>
               </div>
               <p className="text-blue-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-6">
-                Prabhu integrates advanced methodologies — <strong className="text-white">Biofeedback</strong>,{' '}
-                <strong className="text-white">QEEG brain scan</strong>, and{' '}
-                <strong className="text-white">Neurofeedback therapy</strong> — combined with functional medicine
-                and nutritional support, to empower clients in overcoming mental health challenges and achieving
-                holistic personal growth.
+                With over 20 years spanning clinical and corporate practice, Prabhu has helped clients of all ages
+                worldwide overcome mental health challenges — including{' '}
+                <strong className="text-white">anxiety, depression, phobias, and addiction</strong>. His mission
+                is to identify and nurture inborn talents through{' '}
+                <strong className="text-white">Genetic Brain Profiling</strong>,{' '}
+                <strong className="text-white">QEEG brain mapping</strong>, and{' '}
+                <strong className="text-white">Neurofeedback therapy</strong>, saving valuable time on the path to success.
               </p>
               <a
                 href="https://www.linkedin.com/in/prabhu-sithamparam-602bb6a3/"
@@ -118,18 +124,23 @@ export default function AboutPage() {
             Profile Summary
           </h2>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-5 text-base">
-            As Co-founder of <strong className="text-blue-900 dark:text-blue-300">Neuro-Genetics</strong>, Prabhu
-            combines mind science with genetic profiling to treat ADHD, Autism spectrum disorder, and other mental
-            health disorders. His unique approach helps individuals identify and nurture their inborn talents,
-            providing tailored success strategies to ensure sustainable transformation.
+            As Co-founder of <strong className="text-blue-900 dark:text-blue-300">Neuro-Genetics</strong> and
+            Principal Therapist at <strong className="text-blue-900 dark:text-blue-300">PsyCap Consultancy</strong>{' '}
+            (est. 2018), Prabhu is a <strong className="text-blue-900 dark:text-blue-300">Clinical Hypnotherapist</strong>{' '}
+            and <strong className="text-blue-900 dark:text-blue-300">Genetic Brain Profiling Expert</strong> whose
+            journey spans both clinical and corporate practice across Malaysia and internationally.
+          </p>
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-5 text-base">
+            He combines mind science with genetic profiling to treat ADHD, Autism spectrum disorder, and other
+            mental health disorders — helping individuals identify and nurture their inborn talents, providing
+            tailored success strategies for sustainable transformation.
           </p>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
             Prabhu&rsquo;s core mission is to help individuals uncover their{' '}
             <strong className="text-blue-900 dark:text-blue-300">success blueprint</strong>{' '}by aligning their
-            natural abilities with their life&rsquo;s purpose. Through an integrative approach that combines
-            psychotherapy, transpersonal psychology, neurofeedback, and genetic brain profiling, he fosters holistic
-            healing to achieve long-lasting transformation — empowering clients to unlock their full potential and
-            navigate life&rsquo;s challenges with confidence.
+            natural abilities with their life&rsquo;s purpose. Through an integrative approach combining
+            psychotherapy, transpersonal psychology, neurofeedback, and genetic brain profiling, he fosters
+            holistic healing to achieve long-lasting transformation.
           </p>
         </div>
       </section>
@@ -191,7 +202,7 @@ export default function AboutPage() {
           </ul>
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
             {[
-              { num: '12+', label: 'Years Training & Business Development' },
+              { num: '20+', label: 'Years in Health, Wellness & Fitness' },
               { num: '9+',  label: 'Years Clinical Psychotherapy' },
               { num: '5+',  label: 'Countries Served' },
             ].map((s) => (
