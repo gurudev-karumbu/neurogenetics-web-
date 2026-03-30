@@ -14,7 +14,7 @@ const QUALIFICATIONS = [
   { label: 'Life Member', org: 'Malaysian Practitioners of Hypnotherapy Association' },
   { label: 'Life Member', org: 'United States Board of Clinical Hypnotherapy (USBCH)' },
   { label: 'Life Member', org: 'Persatuan Kaunselor Pendidikan Malaysia (PEKA)' },
-  { label: 'Member', org: 'Achology — Applied Modern Psychology, UK' },
+  { label: 'Member', org: 'Achology, Applied Modern Psychology, UK' },
 ];
 
 const EXPERTISE = [
@@ -94,7 +94,7 @@ export default function AboutPage() {
               </div>
               <p className="text-blue-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-6">
                 With over 20 years spanning clinical and corporate practice, Prabhu has helped clients of all ages
-                worldwide overcome mental health challenges — including{' '}
+                worldwide overcome mental health challenges, including{' '}
                 <strong className="text-white">anxiety, depression, phobias, and addiction</strong>. His mission
                 is to identify and nurture inborn talents through{' '}
                 <strong className="text-white">Genetic Brain Profiling</strong>,{' '}
@@ -175,8 +175,8 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">Approach &amp; Philosophy</h2>
           <blockquote className="text-lg md:text-xl text-blue-200 leading-relaxed italic border-l-4 border-yellow-400 pl-6 text-left">
-            &ldquo;Every individual carries a unique success blueprint. My role is to help you uncover it —
-            by aligning your natural abilities with your life&rsquo;s purpose, and healing at every dimension
+            &ldquo;Every individual carries a unique success blueprint. My role is to help you uncover it,
+            by aligning your natural abilities with your life&rsquo;s purpose and healing at every dimension
             that holds you back.&rdquo;
           </blockquote>
           <p className="mt-6 text-teal-300 font-semibold">— Prabhu Sithamparam</p>

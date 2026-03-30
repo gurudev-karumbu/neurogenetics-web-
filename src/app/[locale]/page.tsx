@@ -100,7 +100,7 @@ export default function HomePage() {
             </h2>
             <p className="text-blue-200 max-w-2xl mx-auto text-sm leading-relaxed">
               Mental health comes from how the brain functions. When the brain is not working optimally,
-              thoughts and emotions are affected — yet most approaches never look at the brain directly.
+              thoughts and emotions are affected. Yet most approaches never look at the brain directly.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -108,19 +108,19 @@ export default function HomePage() {
               {
                 icon: '🧬',
                 title: 'Traditional Psychiatry',
-                body: 'Relies on symptoms and labels. Assumes everyone with the same diagnosis is the same — so treatment becomes trial and error, often guesswork.',
+                body: 'Relies on symptoms and labels. Assumes everyone with the same diagnosis is the same, making treatment a process of trial and error.',
                 accent: '#e05252',
               },
               {
                 icon: '📡',
                 title: 'QEEG Brain Mapping',
-                body: 'We measure your brain directly using Quantitative EEG — seeing exactly which regions are over- or under-active and how your unique brain is wired.',
+                body: 'We measure your brain directly using Quantitative EEG, seeing exactly which regions are over- or under-active and how your unique brain is wired.',
                 accent: '#2dd4bf',
               },
               {
                 icon: '🎯',
                 title: 'Personalised Treatment',
-                body: 'Because every brain is different, your therapy plan is built around your actual brain data — not just your symptoms. Precision healing, not guesswork.',
+                body: 'Because every brain is different, your therapy plan is built around your actual brain data, not just your symptoms. Precision healing, not guesswork.',
                 accent: '#fdbb2d',
               },
             ].map((card) => (
@@ -147,7 +147,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
               Mental health challenges rarely arise from a single cause. Our model examines all four
-              dimensions simultaneously — click each to discover how they interact.
+              dimensions simultaneously. Click each to discover how they interact.
             </p>
           </div>
           <FourDModel />
