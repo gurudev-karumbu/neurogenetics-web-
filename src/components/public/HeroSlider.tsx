@@ -1,5 +1,6 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { flushSync } from 'react-dom';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -111,7 +112,7 @@ function SlideContent({ slide }: { slide: Slide }) {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row items-center gap-8 py-16 md:py-20 min-h-[520px]">
 
-        {/* ── Text ── */}
+        {/* Text */}
         <div className="flex-1 text-center lg:text-left text-white z-10">
           <div className="inline-flex items-center gap-2 mb-4">
             {slide.badge && <span className="text-lg">{slide.badge}</span>}
@@ -153,7 +154,7 @@ function SlideContent({ slide }: { slide: Slide }) {
           </div>
         </div>
 
-        {/* ── Image ── */}
+        {/* Image */}
         <div className="flex-1 w-full max-w-lg lg:max-w-none relative flex items-center justify-center">
           <div className="relative w-full" style={{ maxWidth: 480 }}>
             <div
@@ -197,55 +198,52 @@ function SlideContent({ slide }: { slide: Slide }) {
   );
 }
 
-// phase controls the CSS transform state:
-//   'idle'    → only current visible at translateX(0), no transition
-//   'ready'   → incoming positioned at translateX(100%), outgoing at translateX(0), transitions OFF
-//   'sliding' → transitions ON: incoming moves to 0, outgoing moves to -100%
-type Phase = 'idle' | 'ready' | 'sliding';
-
 export default function HeroSlider() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent]   = useState(0);
   const [outgoing, setOutgoing] = useState<number | null>(null);
-  const [phase, setPhase] = useState<Phase>('idle');
-  const [paused, setPaused] = useState(false);
-  const busy = useRef(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [sliding, setSliding]   = useState(false);
+  const [paused, setPaused]     = useState(false);
 
-  function goTo(index: number) {
-    if (index === current || busy.current) return;
+  const busy       = useRef(false);
+  const currentRef = useRef(0);          // always reflects latest current without stale closure
+  currentRef.current = current;
+
+  const goTo = useCallback((index: number) => {
+    if (busy.current) return;
+    if (index === currentRef.current) return;
     busy.current = true;
 
-    // Step 1 — mount incoming slide off-screen to the right (no transition yet)
-    setOutgoing(current);
-    setCurrent(index);
-    setPhase('ready');
-
-    // Step 2 — after browser has painted the 'ready' state, start sliding
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setPhase('sliding');
-
-        // Step 3 — cleanup after transition completes
-        setTimeout(() => {
-          setOutgoing(null);
-          setPhase('idle');
-          busy.current = false;
-        }, DURATION + 50);
-      });
+    // flushSync forces React to paint the 'ready' position synchronously
+    // before we trigger the CSS transition — this is the production-safe fix
+    flushSync(() => {
+      setOutgoing(currentRef.current);
+      setCurrent(index);
+      setSliding(false);   // incoming starts off-screen right (translateX 100%)
     });
-  }
 
-  function next() {
-    goTo((current + 1) % SLIDES.length);
-  }
+    // One rAF is enough after flushSync — browser has already painted
+    requestAnimationFrame(() => {
+      setSliding(true);    // both slides now transition smoothly
 
+      setTimeout(() => {
+        setOutgoing(null);
+        setSliding(false);
+        busy.current = false;
+      }, DURATION + 60);
+    });
+  }, []);
+
+  // Stable interval — uses currentRef so it never goes stale
   useEffect(() => {
     if (paused) return;
-    timer.current = setTimeout(next, INTERVAL);
-    return () => { if (timer.current) clearTimeout(timer.current); };
-  });
+    const id = setInterval(() => {
+      const next = (currentRef.current + 1) % SLIDES.length;
+      goTo(next);
+    }, INTERVAL);
+    return () => clearInterval(id);
+  }, [paused, goTo]);
 
-  const slide = SLIDES[current];
+  const slide           = SLIDES[current];
   const transitionStyle = `transform ${DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`;
 
   return (
@@ -265,17 +263,17 @@ export default function HeroSlider() {
         style={{ background: slide.glow, opacity: 0.06 }}
       />
 
-      {/* Slide viewport — clips both slides */}
+      {/* Viewport */}
       <div className="relative overflow-hidden">
 
-        {/* Outgoing slide — slides out to the left */}
+        {/* Outgoing — exits left */}
         {outgoing !== null && (
           <div
             style={{
               position: 'absolute',
               inset: 0,
-              transform: phase === 'sliding' ? 'translateX(-100%)' : 'translateX(0)',
-              transition: phase === 'sliding' ? transitionStyle : 'none',
+              transform: sliding ? 'translateX(-100%)' : 'translateX(0)',
+              transition: sliding ? transitionStyle : 'none',
               willChange: 'transform',
               zIndex: 1,
             }}
@@ -284,11 +282,11 @@ export default function HeroSlider() {
           </div>
         )}
 
-        {/* Incoming / current slide — slides in from the right */}
+        {/* Incoming — enters from right */}
         <div
           style={{
-            transform: phase === 'ready' ? 'translateX(100%)' : 'translateX(0)',
-            transition: phase === 'sliding' ? transitionStyle : 'none',
+            transform: sliding ? 'translateX(0)' : outgoing !== null ? 'translateX(100%)' : 'translateX(0)',
+            transition: sliding ? transitionStyle : 'none',
             willChange: 'transform',
             zIndex: 2,
           }}
