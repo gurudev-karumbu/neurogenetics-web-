@@ -248,7 +248,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative transition-colors duration-700"
+      className="relative overflow-hidden transition-colors duration-700"
       style={{ background: `linear-gradient(135deg, ${slide.bg[0]}, ${slide.bg[1]}, ${slide.bg[2]})` }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
