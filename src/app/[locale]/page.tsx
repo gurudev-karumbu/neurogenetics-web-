@@ -1,6 +1,7 @@
 import Navbar from '@/components/public/Navbar';
 import Footer from '@/components/public/Footer';
 import FourDModel from '@/components/public/FourDModel';
+import HeroSlider from '@/components/public/HeroSlider';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -30,7 +31,7 @@ const SERVICES = [
     color: '#e05252',
     lightClass: 'bg-red-50 dark:bg-red-950/40',
     href: '/services/body',
-    desc: 'Functional nutrition, hormone testing, and physiological root-cause analysis of mental health challenges.',
+    desc: 'Psychonutritional diagnostics evaluating how diet, nutrient status, and gut health influence mood and cognitive function, with targeted interventions to restore balance.',
   },
   {
     icon: '✨',
@@ -39,7 +40,7 @@ const SERVICES = [
     color: '#a855f7',
     lightClass: 'bg-purple-50 dark:bg-purple-950/40',
     href: '/services/energy',
-    desc: 'Bio-Well and Cell Wellbeing assessments using resonance and frequency analysis to address energetic imbalances.',
+    desc: 'Bioresonance scanning and frequency-based treatments that aim to influence the body and mind using electromagnetic frequencies, assessed through Bio-Well and Cell Wellbeing technology.',
   },
 ];
 
@@ -73,72 +74,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1a2a6c] via-[#163570] to-[#0d5c69] dark:from-[#04070f] dark:via-[#080f1f] dark:to-[#061520]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full opacity-10 dark:opacity-20 bg-yellow-400 dark:bg-yellow-300 blur-3xl" />
-          <div className="absolute -bottom-32 -left-20 w-80 h-80 rounded-full opacity-10 dark:opacity-20 bg-teal-400 dark:bg-teal-300 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-0 dark:opacity-5 bg-indigo-400 blur-3xl" />
-        </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 py-16 md:py-20">
-            {/* Text */}
-            <div className="flex-1 text-center lg:text-left text-white">
-              <p className="text-yellow-300 text-xs font-semibold tracking-[0.2em] uppercase mb-2 mx-auto lg:mx-0">
-                Malaysia&rsquo;s Premier
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3">
-                <span className="text-yellow-400">Integrative</span>{' '}
-                <span className="text-yellow-400">Mental Health</span>
-                <br />
-                <span className="text-white">Centre</span>
-              </h1>
-              <div className="grid grid-cols-2 gap-3 mb-8 max-w-sm mx-auto lg:mx-0">
-                {[
-                  { label: 'Mind',          sub: 'Psychology & Therapy',      icon: '🧠', color: '#818cf8' },
-                  { label: 'Brain',         sub: 'QEEG & Neurofeedback',       icon: '⚡', color: '#2dd4bf' },
-                  { label: 'Body',          sub: 'Functional Medicine',        icon: '🔬', color: '#e05252' },
-                  { label: 'Bio-Resonance', sub: 'Resonance & Frequency',      icon: '✨', color: '#a855f7' },
-                ].map((d) => (
-                  <div
-                    key={d.label}
-                    className="flex flex-col gap-0.5 px-4 py-3 rounded-xl border-2"
-                    style={{ color: d.color, borderColor: `${d.color}60`, background: `${d.color}18` }}
-                  >
-                    <span className="flex items-center gap-1.5 font-bold text-sm">{d.icon} {d.label}</span>
-                    <span className="text-xs opacity-75">{d.sub}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-lg text-blue-200 max-w-xl mb-10 leading-relaxed mx-auto lg:mx-0">
-                The <strong className="text-white">Neuro-Genetics 4D Model</strong> addresses mental health
-                across four interconnected dimensions — because true healing cannot come from treating just one layer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/contact" className="px-8 py-3.5 rounded-xl font-semibold text-sm bg-yellow-400 text-blue-900 hover:bg-yellow-300 transition-colors">
-                  Book a Consultation
-                </Link>
-                <Link href="#model" className="px-8 py-3.5 rounded-xl font-semibold text-sm border border-white/30 hover:bg-white/10 transition-colors">
-                  Explore the 4D Model
-                </Link>
-              </div>
-            </div>
-            {/* Hero image */}
-            <div className="flex-1 w-full max-w-lg lg:max-w-none">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-                <Image
-                  src="/images/hero-woman.png"
-                  alt="Malaysian woman in a wellness consultation"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* ── Conditions scroll banner ───────────────────────────────────────── */}
       <section className="py-3 border-b border-gray-100 dark:border-teal-900/30 bg-white dark:bg-[#070d1a] overflow-hidden transition-colors">
@@ -278,13 +214,13 @@ export default function HomePage() {
               </h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-base">
                 A thyroid imbalance can cause depression. A disrupted cortisol cycle can trigger anxiety.
-                Unresolved trauma can rewire brainwave patterns. Treating only the symptoms — with medication
-                or therapy alone — misses the deeper picture.
+                Unresolved trauma can rewire brainwave patterns. When we treat only the surface symptoms
+                through medication or therapy alone, we miss the deeper picture entirely.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
-                The Neuro-Genetics 4D Model evaluates all four dimensions simultaneously, identifying the{' '}
-                <strong className="text-blue-900 dark:text-blue-300">root causes</strong> — not just the surface symptoms
-                — so that recovery is complete, lasting, and truly yours.
+                The Neuro-Genetics 4D Model evaluates all four dimensions at once, uncovering the{' '}
+                <strong className="text-blue-900 dark:text-blue-300">root causes</strong> rather than just managing
+                surface symptoms, so that your recovery is complete, lasting, and truly your own.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[

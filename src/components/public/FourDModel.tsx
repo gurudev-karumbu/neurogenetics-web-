@@ -40,7 +40,7 @@ const DIMENSIONS = [
     href: '/services/body',
     services: ['Functional Nutrition', 'Hormone & Cortisol Testing', 'Thyroid & Postpartum Support'],
     description:
-      'Addressing the physiological roots of mental health — thyroid imbalances, hormonal disruption, nutritional deficiencies, and inflammation.',
+      'Within Functional Medicine, psychonutritional diagnostics evaluates how diet, nutrient status, and gut health influence mood and cognitive function, applying targeted interventions to restore balance and optimise brain health.',
   },
   {
     id: 'energy',
@@ -53,7 +53,7 @@ const DIMENSIONS = [
     href: '/services/energy',
     services: ['Bio-Well Analysis', 'Cell Wellbeing Assessment', 'Resonance & Frequency Mapping'],
     description:
-      'Bio-resonance and frequency-based assessment using Bio-Well and Cell Wellbeing technology to evaluate energetic patterns and whole-person balance.',
+      'Bioresonance scanning and frequency-based treatments are alternative approaches that aim to influence the body and mind using electromagnetic frequencies, assessed through Bio-Well and Cell Wellbeing technology.',
   },
 ];
 

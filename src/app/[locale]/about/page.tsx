@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const QUALIFICATIONS = [
-  { label: 'Doctor of Philosophy (PhD) — Psychology', org: 'University of Sedona, USA (2019–2024)' },
-  { label: 'Practitioner Diploma — Clinical Hypnosis', org: 'LCCH International (2011–2012)' },
-  { label: 'Certificate — Neuro Linguistic Programming (NLP)', org: 'LCCH International (2014)' },
-  { label: 'Practitioner Certificate — Cognitive Science', org: 'The Academy for Modern Applied Psychology (Achology)' },
+  { label: 'Doctor of Philosophy (PhD) in Psychology', org: 'University of Sedona, USA (2019–2024)' },
+  { label: 'Practitioner Diploma in Clinical Hypnosis', org: 'LCCH International (2011–2012)' },
+  { label: 'Certificate in Neuro Linguistic Programming (NLP)', org: 'LCCH International (2014)' },
+  { label: 'Practitioner Certificate in Cognitive Science', org: 'The Academy for Modern Applied Psychology (Achology)' },
   { label: 'Certified NLP Practitioner, IGNLP (UK)', org: 'Professional Member (UK)' },
   { label: 'Certified Neuro-Psychology', org: '' },
   { label: 'HRD Corp Certified Trainer', org: '' },
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </p>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-5 text-base">
             He combines mind science with genetic profiling to treat ADHD, Autism spectrum disorder, and other
-            mental health disorders — helping individuals identify and nurture their inborn talents, providing
+            mental health disorders. His work helps individuals identify and nurture their inborn talents, with
             tailored success strategies for sustainable transformation.
           </p>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
@@ -195,7 +195,7 @@ export default function AboutPage() {
                 <span className="mt-1 w-2 h-2 rounded-full flex-shrink-0 bg-teal-500" />
                 <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                   <strong className="text-blue-900 dark:text-blue-300">{q.label}</strong>
-                  {q.org && <span className="text-gray-500 dark:text-gray-400"> — {q.org}</span>}
+                  {q.org && <span className="text-gray-500 dark:text-gray-400">, {q.org}</span>}
                 </span>
               </li>
             ))}
