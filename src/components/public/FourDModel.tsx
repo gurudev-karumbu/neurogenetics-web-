@@ -6,7 +6,7 @@ const DIMENSIONS = [
   {
     id: 'mind',
     label: 'Mind',
-    subtitle: 'Psychology & Therapy',
+    subtitle: 'Psychology & Psychotherapy',
     color: '#4f6fd4',
     lightColor: '#e8ecf7',
     darkColor: 'rgba(79,111,212,0.15)',
@@ -14,20 +14,20 @@ const DIMENSIONS = [
     href: '/services/mind',
     services: ['Hypnotherapy', 'Psychotherapy', 'Psychological Assessment'],
     description:
-      'Professional psychological therapy addressing anxiety, depression, trauma, and emotional wellbeing through evidence-based techniques including hypnotherapy.',
+      'Comprehensive psychological assessments and psychotherapy to uncover deeper patterns, behaviours, and emotional challenges. We work at the subconscious level to identify and release root causes, retraining the mind towards calmness, clarity, and lasting emotional resilience.',
   },
   {
     id: 'neuro',
     label: 'Brain',
-    subtitle: 'Brain Science & QEEG',
+    subtitle: 'QEEG, Neurofeedback & Transcranial Photobiomodulation',
     color: '#2dd4bf',
     lightColor: '#e0f5f3',
     darkColor: 'rgba(45,212,191,0.15)',
     icon: '⚡',
     href: '/services/neuro',
-    services: ['QEEG Brain Mapping', 'Neurofeedback Therapy', 'BrainMaster Technology'],
+    services: ['QEEG Brain Mapping', 'Neurofeedback Therapy', 'Transcranial Photobiomodulation'],
     description:
-      'Advanced brain scanning (QEEG) and neurofeedback therapy to retrain brainwave patterns, improving focus, mood regulation, and cognitive function.',
+      'We assess how your brain is functioning using QEEG brain mapping, then retrain brainwave patterns through neurofeedback. We also use transcranial photobiomodulation to support brain function at a cellular level, enhancing focus, emotional regulation, and mental clarity.',
   },
   {
     id: 'body',

@@ -29,13 +29,13 @@
     "learnMore": "Learn more →",
     "mind": {
       "title": "Mind",
-      "sub": "Psychology & Therapy",
-      "desc": "Hypnotherapy, psychotherapy, and psychological assessments for anxiety, depression, and emotional wellbeing."
+      "sub": "Psychology & Psychotherapy",
+      "desc": "Comprehensive psychological assessments and psychotherapy to uncover deeper patterns, behaviours, and emotional challenges. Retraining the mind towards calmness, clarity, and lasting emotional resilience."
     },
     "neuro": {
-      "title": "Neuro",
-      "sub": "Brain Science",
-      "desc": "QEEG brain mapping and neurofeedback therapy to retrain brainwave patterns for lasting mental clarity."
+      "title": "Brain",
+      "sub": "QEEG, Neurofeedback & Transcranial Photobiomodulation",
+      "desc": "QEEG brain mapping and neurofeedback to retrain brainwave patterns, plus transcranial photobiomodulation to support brain function at a cellular level, enhancing focus, emotional regulation, and mental clarity."
     },
     "body": {
       "title": "Body",
