@@ -85,7 +85,7 @@ export default function FourDModel() {
             </svg>
 
             {/* Centre */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1 shadow-lg bg-gradient-to-br from-blue-800 to-teal-700">
                   <span className="text-white font-bold text-xl">4D</span>
