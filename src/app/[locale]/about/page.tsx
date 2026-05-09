@@ -2,6 +2,7 @@ import Navbar from '@/components/public/Navbar';
 import Footer from '@/components/public/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
+import SpeakingGallery from '@/components/public/SpeakingGallery';
 
 const QUALIFICATIONS = [
   { label: 'Doctor of Philosophy (PhD) in Psychology', org: 'University of Sedona, USA (2019–2024)' },
@@ -243,31 +244,7 @@ export default function AboutPage() {
               Prabhu regularly speaks at corporate wellness events, mental health conferences, and public workshops across Malaysia.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { src: '/images/prabhu-large-workshop-kl.jpeg', caption: 'Corporate wellness workshop — Kuala Lumpur' },
-              { src: '/images/prabhu-presenting-workshop-wide.jpeg', caption: 'Body &amp; Mind Connection seminar' },
-              { src: '/images/prabhu-speaking-event-2.jpeg', caption: 'MyEndosis health symposium' },
-              { src: '/images/prabhu-presenting-full-audience.jpeg', caption: 'Public talk — full-house audience' },
-              { src: '/images/prabhu-award-ceremony.jpeg', caption: 'Award presentation at wellness event' },
-              { src: '/images/prabhu-workshop-room-overview.jpeg', caption: 'Multi-organisational wellness conference' },
-            ].map((img) => (
-              <div key={img.src} className="relative rounded-2xl overflow-hidden shadow-md group" style={{ aspectRatio: '4/3' }}>
-                <Image
-                  src={img.src}
-                  alt={img.caption}
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <p
-                  className="absolute bottom-3 left-3 right-3 text-white text-xs font-medium leading-snug"
-                  dangerouslySetInnerHTML={{ __html: img.caption }}
-                />
-              </div>
-            ))}
-          </div>
+          <SpeakingGallery />
         </div>
       </section>
 
