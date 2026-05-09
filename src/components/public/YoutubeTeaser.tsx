@@ -35,6 +35,12 @@ function loadYouTubeApi(cb: () => void) {
   };
 }
 
+function fmt(secs: number) {
+  const m = Math.floor(secs / 60);
+  const s = Math.floor(secs % 60);
+  return `${m}:${s.toString().padStart(2, '0')}`;
+}
+
 type Phase = 'idle' | 'playing' | 'ended';
 
 export default function YoutubeTeaser({ id, title, start, end }: Props) {
@@ -44,7 +50,10 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
   const playerRef = useRef<any>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [phase, setPhase] = useState<Phase>('idle');
+  const [elapsed, setElapsed] = useState(0); // seconds into excerpt
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const duration = end - start;
 
   useEffect(() => {
     const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
@@ -71,9 +80,9 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
           start,
           rel: 0,
           modestbranding: 1,
-          controls: 0,       // hides seekbar + all controls
-          disablekb: 1,      // disables keyboard shortcuts
-          iv_load_policy: 3, // no annotations
+          controls: 0,
+          disablekb: 1,
+          iv_load_policy: 3,
           playsinline: 1,
         },
         events: {
@@ -85,6 +94,8 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
               setPhase('playing');
               timerRef.current = setInterval(() => {
                 const t = playerRef.current?.getCurrentTime?.() ?? 0;
+                const e2 = Math.min(t - start, duration);
+                setElapsed(e2);
                 if (t >= end) {
                   playerRef.current?.pauseVideo();
                   setPhase('ended');
@@ -104,18 +115,22 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
       if (timerRef.current) clearInterval(timerRef.current);
       playerRef.current?.destroy?.();
     };
-  }, [id, start, end]);
+  }, [id, start, end, duration]);
 
   function handlePlay() {
+    setElapsed(0);
     playerRef.current?.seekTo(start, true);
     playerRef.current?.playVideo();
   }
 
   function handleReplay() {
+    setElapsed(0);
     setPhase('idle');
     playerRef.current?.seekTo(start, true);
     playerRef.current?.playVideo();
   }
+
+  const progress = duration > 0 ? Math.min((elapsed / duration) * 100, 100) : 0;
 
   return (
     <div ref={containerRef} className="relative rounded-2xl overflow-hidden shadow-lg bg-black" style={{ aspectRatio: '16/9' }}>
@@ -137,23 +152,38 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
         </div>
       )}
 
-      {/* Fullscreen button — visible while playing */}
+      {/* Progress bar + controls — visible while playing */}
       {phase === 'playing' && (
-        <button
-          onClick={toggleFullscreen}
-          className="absolute bottom-3 right-3 bg-black/50 hover:bg-black/70 text-white rounded-lg p-1.5 transition-colors z-10"
-          aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-        >
-          {isFullscreen ? (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15v4.5M15 15h4.5M15 15l5.25 5.25M9 15H4.5M9 15v4.5M9 15l-5.25 5.25" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-            </svg>
-          )}
-        </button>
+        <div className="absolute bottom-0 left-0 right-0 px-3 pb-3 pt-6 bg-gradient-to-t from-black/70 to-transparent z-10">
+          {/* Progress bar */}
+          <div className="w-full h-1 bg-white/20 rounded-full mb-2">
+            <div
+              className="h-1 bg-teal-400 rounded-full transition-all duration-300"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          {/* Time + fullscreen row */}
+          <div className="flex items-center justify-between">
+            <span className="text-white text-xs font-mono opacity-80">
+              {fmt(elapsed)} / {fmt(duration)} <span className="opacity-50 ml-1">preview</span>
+            </span>
+            <button
+              onClick={toggleFullscreen}
+              className="bg-black/40 hover:bg-black/60 text-white rounded-lg p-1.5 transition-colors"
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+            >
+              {isFullscreen ? (
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15v4.5M15 15h4.5M15 15l5.25 5.25M9 15H4.5M9 15v4.5M9 15l-5.25 5.25" />
+                </svg>
+              ) : (
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       )}
 
       {/* Ended overlay — CTA */}
