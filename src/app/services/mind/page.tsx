@@ -37,7 +37,7 @@ const SERVICES = [
   {
     icon: '🌀',
     title: 'Clinical Hypnotherapy',
-    desc: 'A deeply focused, relaxed state is used to access the subconscious mind, where ingrained patterns, beliefs, and emotional responses are stored. Hypnotherapy allows us to identify and reframe these patterns at their source, producing change that lasts.',
+    desc: 'A deeply focused, relaxed state is used to access the subconscious mind — where ingrained patterns, beliefs, and emotional responses are stored. Hypnotherapy allows us to identify and reframe these patterns at their source, producing change that lasts.',
     detail: ['Anxiety & panic relief', 'Phobia resolution', 'Habit and addiction release', 'Emotional trauma clearing', 'Self-esteem and confidence building'],
     color: '#4f6fd4',
   },
@@ -51,7 +51,7 @@ const SERVICES = [
   {
     icon: '📋',
     title: 'Psychological Assessment',
-    desc: 'A thorough, structured evaluation of psychological functioning, identifying underlying patterns, cognitive strengths, emotional challenges, and areas of concern. The assessment forms the foundation of a precise, personalised therapy plan.',
+    desc: 'A thorough, structured evaluation of psychological functioning — identifying underlying patterns, cognitive strengths, emotional challenges, and areas of concern. The assessment forms the foundation of a precise, personalised therapy plan.',
     detail: ['Comprehensive clinical interview', 'Behavioural and cognitive evaluation', 'Emotional health screening', 'Psychometric profiling', 'Detailed written report & recommendations'],
     color: '#6b8fe8',
   },
@@ -76,7 +76,7 @@ const PROCESS = [
   {
     step: '01',
     title: 'Initial Consultation',
-    desc: 'A confidential conversation to understand your concerns, history, and goals. No judgement, just listening.',
+    desc: 'A confidential conversation to understand your concerns, history, and goals. No judgement — just listening.',
   },
   {
     step: '02',
@@ -91,7 +91,7 @@ const PROCESS = [
   {
     step: '04',
     title: 'Therapy Sessions',
-    desc: 'Ongoing sessions working at the subconscious level, retraining the mind and releasing root causes.',
+    desc: 'Ongoing sessions working at the subconscious level — retraining the mind and releasing root causes.',
   },
   {
     step: '05',
@@ -120,7 +120,7 @@ export default function MindServicePage() {
             <div className="flex-1 text-white text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 border"
                 style={{ background: `${ACCENT}25`, color: '#a5b4fc', borderColor: `${ACCENT}50` }}>
-                🧠 Dimension 01 · Mind
+                🧠 Dimension 01 — Mind
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 text-indigo-300">
                 Psychology &<br />Psychotherapy
@@ -192,8 +192,8 @@ export default function MindServicePage() {
             <div className="flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0">
               <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
                 <Image
-                  src="/images/mind-therapy-session.jpeg"
-                  alt="Psychotherapy consultation at Neurogenetics.my — calm, professional setting"
+                  src="/images/mind-therapy.png"
+                  alt="Calm psychotherapy consultation — Neurogenetics.my"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -217,12 +217,12 @@ export default function MindServicePage() {
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base mb-4">
                     Most approaches address the surface. Medication manages symptoms. Advice changes
                     behaviour temporarily. But lasting transformation happens when we work at the
-                    <strong className="text-blue-900 dark:text-blue-300"> subconscious level</strong>, where
+                    <strong className="text-blue-900 dark:text-blue-300"> subconscious level</strong> — where
                     the root patterns actually live.
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
                     At Neurogenetics, our Mind dimension combines psychological assessment, psychotherapy,
-                    and clinical hypnotherapy to identify and release these root causes, not just manage
+                    and clinical hypnotherapy to identify and release these root causes — not just manage
                     their symptoms.
                   </p>
                 </div>
@@ -240,7 +240,7 @@ export default function MindServicePage() {
               How It Works
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
-              A structured, compassionate process from your first conversation to lasting change.
+              A structured, compassionate process — from your first conversation to lasting change.
             </p>
           </div>
           <div className="relative">
@@ -348,7 +348,7 @@ export default function MindServicePage() {
                   {
                     icon: '🎯',
                     title: 'Root Cause, Not Symptom Management',
-                    desc: 'We work at the subconscious level to find and release what is actually driving your challenges, not just manage their surface expression.',
+                    desc: 'We work at the subconscious level to find and release what is actually driving your challenges — not just manage their surface expression.',
                   },
                   {
                     icon: '🔬',
@@ -383,17 +383,7 @@ export default function MindServicePage() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-col gap-4">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
-                <Image
-                  src="/images/wellness-woman.jpg"
-                  alt="Client experiencing calm and clarity after psychotherapy at Neurogenetics.my"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {[
                 { num: '9+', label: 'Years of Clinical Psychotherapy' },
                 { num: 'PhD', label: 'Psychology, University of Sedona' },
@@ -419,9 +409,8 @@ export default function MindServicePage() {
                   healing at every dimension that holds you back.&rdquo;
                 </blockquote>
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
-                  Prabhu Sithamparam, PhD
+                  — Prabhu Sithamparam, PhD
                 </p>
-              </div>
               </div>
             </div>
           </div>
@@ -474,7 +463,7 @@ export default function MindServicePage() {
             Ready to Work at the Root?
           </h2>
           <p className="text-indigo-100 mb-8 text-sm leading-relaxed max-w-lg mx-auto">
-            A confidential consultation with Prabhu is the first step. No pressure, just a genuine
+            A confidential consultation with Prabhu is the first step. No pressure — just a genuine
             conversation about where you are and how we can help.
           </p>
           <Link

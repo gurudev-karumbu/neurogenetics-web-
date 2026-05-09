@@ -40,6 +40,7 @@ export default function Footer() {
               <li><Link href="/services/neuro" className="hover:text-white transition-colors">Brain — Brain Science</Link></li>
               <li><Link href="/services/body" className="hover:text-white transition-colors">Body — Functional Medicine</Link></li>
               <li><Link href="/services/energy" className="hover:text-white transition-colors">Bio-Resonance &amp; Frequency</Link></li>
+              <li><Link href="/services/corporate" className="hover:text-white transition-colors">Corporate Wellness</Link></li>
             </ul>
           </div>
 

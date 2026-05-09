@@ -15,6 +15,7 @@ const NAV_LINKS = [
       { href: '/services/neuro', label: 'Brain — Brain Science' },
       { href: '/services/body', label: 'Body — Functional Medicine' },
       { href: '/services/energy', label: 'Bio-Resonance & Frequency' },
+      { href: '/services/corporate', label: 'Corporate Wellness' },
     ],
   },
   { href: '/about', label: 'About' },

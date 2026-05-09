@@ -2,6 +2,7 @@ import Navbar from '@/components/public/Navbar';
 import Footer from '@/components/public/Footer';
 import FourDModel from '@/components/public/FourDModel';
 import HeroSlider from '@/components/public/HeroSlider';
+import ServiceCard from '@/components/public/ServiceCard';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -164,20 +165,48 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((s) => (
-              <Link
-                key={s.title}
-                href={s.href}
-                className="glass-card rounded-2xl p-6 hover:shadow-xl transition-shadow"
-              >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4 ${s.lightClass}`}>
-                  {s.icon}
-                </div>
-                <h3 className="font-bold text-lg mb-0.5 text-blue-900 dark:text-blue-300">{s.title}</h3>
-                <p className="text-xs font-medium text-gray-400 dark:text-gray-500 mb-3">{s.sub}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{s.desc}</p>
-                <p className="mt-4 text-xs font-semibold text-teal-600 dark:text-teal-400">Learn more →</p>
-              </Link>
+              <ServiceCard key={s.title} {...s} />
             ))}
+          </div>
+
+          {/* Corporate spotlight — full-width banner, distinct B2B track */}
+          <div className="mt-6 rounded-3xl overflow-hidden bg-gradient-to-r from-[#052e16] via-[#064e3b] to-[#065f46] shadow-xl">
+            <div className="flex flex-col lg:flex-row items-center gap-0">
+              <div className="flex-1 p-8 lg:p-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-4 bg-yellow-400 text-emerald-900">
+                  🏢 For Organisations &nbsp;·&nbsp; HRD Corp Claimable
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-emerald-300 mb-3">
+                  Corporate Wellness &amp; Human Capital Development
+                </h3>
+                <p className="text-emerald-100 text-sm leading-relaxed mb-5 max-w-lg">
+                  Science-driven programmes for HR teams, leadership, and employees. Integrating
+                  psychology, neuroscience, and behavioral intelligence to optimise performance,
+                  reduce burnout, and build resilient organisations.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {['Talent Discovery', 'Mental Health Screening', 'Leadership Intelligence', 'Stress & Resilience', 'Neuro-Optimisation', 'HeartMath Coherence'].map((tag) => (
+                    <span key={tag} className="text-xs px-3 py-1 rounded-full border border-emerald-400/30 bg-emerald-400/10 text-emerald-200">{tag}</span>
+                  ))}
+                </div>
+                <Link
+                  href="/services/corporate"
+                  className="inline-block px-6 py-3 rounded-xl font-semibold text-sm bg-yellow-400 text-emerald-900 hover:bg-yellow-300 transition-colors"
+                >
+                  Explore Corporate Programmes →
+                </Link>
+              </div>
+              <div className="flex-shrink-0 w-full lg:w-80 h-56 lg:h-auto lg:self-stretch relative">
+                <Image
+                  src="/images/corporate-workshop-1.jpeg"
+                  alt="Corporate wellness workshop by Neurogenetics.my"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                />
+                <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-[#064e3b]/60 lg:to-transparent" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -234,6 +263,63 @@ export default function HomePage() {
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{stat.label}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Corporate Wellness ────────────────────────────────────────────── */}
+      <section className="py-20 bg-gradient-to-br from-[#052e16] to-[#064e3b] text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Text */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-5 bg-yellow-400 text-emerald-900">
+                ✅ HRD Corp Claimable Programmes
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-300">
+                Corporate Wellness &amp; Human Capital Development
+              </h2>
+              <p className="text-emerald-100 text-base leading-relaxed mb-6 max-w-lg">
+                Science-driven, human-centric programmes for organisations. Integrating psychology,
+                neuroscience, and behavioral intelligence to enhance employee wellbeing, optimise
+                performance, and align talent with organisational goals.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {[
+                  'Talent Discovery & Mapping',
+                  'Mental Health Screening',
+                  'Leadership Intelligence',
+                  'Stress & Resilience',
+                  'Neuro-Optimisation',
+                  'HeartMath Coherence',
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1.5 rounded-full font-medium border border-emerald-400/30 bg-emerald-400/10 text-emerald-200"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/services/corporate"
+                className="inline-block px-8 py-3.5 rounded-xl font-semibold text-sm bg-yellow-400 text-emerald-900 hover:bg-yellow-300 transition-colors"
+              >
+                Explore Corporate Programmes
+              </Link>
+            </div>
+            {/* Image */}
+            <div className="flex-shrink-0 w-full max-w-md mx-auto lg:mx-0">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-400/30" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src="/images/corporate-workshop-1.jpeg"
+                  alt="Corporate wellness workshop by Neurogenetics.my in Kuala Lumpur"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                />
               </div>
             </div>
           </div>

@@ -228,8 +228,8 @@ export default function BodyServicePage() {
             <div className="flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0">
               <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
                 <Image
-                  src="/images/body-therapy.png"
-                  alt="Functional nutrition consultation at Neurogenetics.my"
+                  src="/images/body-nutrition.jpeg"
+                  alt="Functional nutrition and supplement spread at Neurogenetics.my"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -460,7 +460,17 @@ export default function BodyServicePage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src="/images/Mother_and_child_202603221937.jpeg"
+                  alt="Mother and child benefiting from functional medicine support at Neurogenetics.my"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
               {[
                 { num: '90%', label: 'of serotonin produced in the gut' },
                 { num: '35+', label: 'minerals and metals tested via HTMA' },
@@ -488,6 +498,7 @@ export default function BodyServicePage() {
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
                   Prabhu Sithamparam, PhD
                 </p>
+              </div>
               </div>
             </div>
           </div>

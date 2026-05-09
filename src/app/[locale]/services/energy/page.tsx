@@ -7,14 +7,15 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Bio-Resonance — Resonance & Frequency Therapy | Neurogenetics.my',
   description:
-    'Bio-Well analysis, Cell Wellbeing assessment, and resonance frequency mapping in Malaysia. Understanding and supporting the body\'s energy field for holistic mental and physical wellbeing.',
+    'Bio-Well analysis, Cell Wellbeing assessment, and advanced frequency-based diagnostics in Malaysia. Understanding and supporting the body\'s energy field for holistic mental and physical wellbeing.',
   keywords: [
     'bio-resonance therapy malaysia',
     'bio-well analysis malaysia',
     'cell wellbeing assessment malaysia',
     'energy field assessment malaysia',
     'frequency therapy malaysia',
-    'aura analysis malaysia',
+    'voice biomarker analysis malaysia',
+    'bioelectrographic imaging malaysia',
     'holistic mental health malaysia',
     'bioenergetics malaysia',
     'integrative wellness malaysia',
@@ -50,7 +51,7 @@ const SERVICES = [
   {
     icon: '🧬',
     title: 'Cell Wellbeing Assessment',
-    desc: 'The Cell Wellbeing epigenetic hair analysis evaluates how your environment and lifestyle are influencing your cellular function and gene expression. It identifies over 800 epigenetic indicators covering nutrition, toxins, electromagnetic stress, and emotional wellbeing, providing a comprehensive picture of what is affecting you at a cellular level.',
+    desc: 'The Cell Wellbeing epigenetic hair analysis evaluates how your environment and lifestyle are influencing your cellular function and gene expression. It identifies over 800 epigenetic indicators covering nutrition, toxins, electromagnetic stress, and emotional wellbeing.',
     detail: [
       'Epigenetic hair follicle analysis',
       '800+ environmental and cellular indicators',
@@ -72,6 +73,44 @@ const SERVICES = [
       'Integration with 4D healing model findings',
     ],
     color: '#7c3aed',
+  },
+];
+
+const ADVANCED_DIAGNOSTICS = [
+  {
+    icon: '🎙️',
+    title: 'Voice-Based Neuro-Biomarker Analysis',
+    subtitle: 'Neuro-Acoustic Mapping',
+    desc: 'The human voice is a real-time output of the central nervous system, emotional regulation circuits, and cognitive state. Through acoustic pattern analysis, voice signals are evaluated for frequency stability, speech rhythm variability, tonal micro-fluctuations, and energy distribution patterns. This offers a non-invasive window into neuro-psychological state.',
+    color: '#a855f7',
+  },
+  {
+    icon: '✨',
+    title: 'Bioelectrographic Field Imaging',
+    subtitle: 'Electro-Photon Emission Mapping',
+    desc: 'The human body continuously emits ultra-weak light and electromagnetic signals from the skin surface. When stimulated by a controlled electromagnetic field, the body produces a measurable electro-photonic response pattern. The resulting image is interpreted as a functional bio-energetic map reflecting stress adaptation and physiological balance.',
+    color: '#9333ea',
+  },
+  {
+    icon: '〰️',
+    title: 'Bio-Resonance Interaction Analysis',
+    subtitle: 'Systemic Frequency Response Mapping',
+    desc: 'Every biological system operates through electrical and vibrational signalling networks. This analysis evaluates how biological systems respond to external frequency stimulation and internal regulatory feedback loops. It identifies system coherence versus dissonance patterns, adaptive capacity, and functional stress signatures across the body\'s regulatory systems.',
+    color: '#7c3aed',
+  },
+  {
+    icon: '🔬',
+    title: 'Cellular Bio-Communication Profiling',
+    subtitle: 'Multi-System Functional Mapping',
+    desc: 'At the cellular level, biological systems communicate through electromagnetic signalling, ionic exchange networks, and biophotonic emissions. This assessment evaluates how effectively the body maintains internal communication stability, cellular signalling efficiency, and system-wide coordination, providing a systems-level perspective of functional balance.',
+    color: '#6d28d9',
+  },
+  {
+    icon: '⚡',
+    title: 'Frequency-Based Stimulation Systems',
+    subtitle: 'Regulatory and Recovery Support',
+    desc: 'The human body is sensitive to electromagnetic and mechanical frequency inputs. Controlled stimulation systems are used to support nervous system relaxation response, microcirculatory activation, and autonomic nervous system modulation. This approach explores how external frequency input may influence cellular membrane dynamics and systemic recovery rhythms.',
+    color: '#5b21b6',
   },
 ];
 
@@ -148,10 +187,10 @@ export default function EnergyServicePage() {
                 The Energetic Dimension of Healing
               </p>
               <p className="text-purple-100 text-base leading-relaxed max-w-xl mb-8 mx-auto lg:mx-0">
-                Bioresonance scanning and frequency-based assessments are alternative approaches
-                that aim to influence the body and mind using electromagnetic frequencies, assessed
-                through Bio-Well and Cell Wellbeing technology — addressing the energetic root of
+                Bioresonance scanning and frequency-based assessments address the energetic root of
                 imbalance alongside the psychological, neurological, and physiological dimensions.
+                From biofield imaging to advanced acoustic and cellular analysis, we assess what
+                conventional approaches cannot yet fully measure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
@@ -215,8 +254,8 @@ export default function EnergyServicePage() {
             <div className="flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0">
               <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
                 <Image
-                  src="/images/energy-therapy.png"
-                  alt="Bio-Well energy field assessment at Neurogenetics.my"
+                  src="/images/bio-resonance-frequency.jpeg"
+                  alt="Human biofield energy frequency visualisation at Neurogenetics.my"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -238,14 +277,14 @@ export default function EnergyServicePage() {
                     When they are disrupted, symptoms emerge that often have no clear conventional explanation.
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base mb-4">
-                    Bio-Resonance therapy works with these energetic frequencies directly — assessing
+                    Bio-Resonance therapy works with these energetic frequencies directly, assessing
                     the biofield through Bio-Well technology, evaluating epigenetic influences through
                     Cell Wellbeing analysis, and applying targeted frequency support to restore coherence
                     and balance.
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
                     As the fourth dimension of the Neurogenetics 4D model, Bio-Resonance completes the
-                    picture that Mind, Brain, and Body begin — addressing the aspects of health that
+                    picture that Mind, Brain, and Body begin, addressing the aspects of health that
                     conventional approaches do not yet fully account for.
                   </p>
                 </div>
@@ -294,7 +333,7 @@ export default function EnergyServicePage() {
               How It Works
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
-              A gentle, non-invasive process to assess and support your body's energetic dimension.
+              A gentle, non-invasive process to assess and support your body&apos;s energetic dimension.
             </p>
           </div>
           <div className="relative">
@@ -359,6 +398,70 @@ export default function EnergyServicePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Advanced Diagnostic Technologies ─────────────────────────────── */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4"
+              style={{ background: `${ACCENT}15`, color: ACCENT }}>
+              Advanced Capabilities
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 dark:text-blue-300 heading-underline-center">
+              Advanced Diagnostic Technologies
+            </h2>
+            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              Beyond standard assessments, Neurogenetics integrates cutting-edge functional analysis
+              technologies that evaluate the body&apos;s communication systems, energetic fields, and
+              neuro-physiological markers, offering insights unavailable through conventional testing.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ADVANCED_DIAGNOSTICS.map((d) => (
+              <div
+                key={d.title}
+                className="rounded-2xl p-6 border hover:shadow-lg transition-shadow bg-white dark:bg-gray-900"
+                style={{ borderColor: `${d.color}30`, borderTopColor: d.color, borderTopWidth: 3 }}
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
+                  style={{ background: `${d.color}15` }}
+                >
+                  {d.icon}
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: d.color }}>
+                  {d.subtitle}
+                </p>
+                <h3 className="text-base font-bold mb-3 text-blue-900 dark:text-blue-300">{d.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
+            {/* Sixth card — CTA */}
+            <div
+              className="rounded-2xl p-6 border flex flex-col justify-between"
+              style={{ background: `${ACCENT}08`, borderColor: `${ACCENT}30` }}
+            >
+              <div>
+                <div className="text-3xl mb-4">🔬</div>
+                <h3 className="text-base font-bold mb-3 text-blue-900 dark:text-blue-300">
+                  Not Sure Which Assessment You Need?
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                  Our initial consultation identifies the most relevant combination of assessments
+                  for your specific concerns, health history, and goals.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-block px-6 py-3 rounded-xl font-semibold text-sm text-white text-center transition-colors"
+                style={{ background: ACCENT }}
+              >
+                Book a Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -435,7 +538,17 @@ export default function EnergyServicePage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src="/images/Malaysian_woman_in_202603221940.jpeg"
+                  alt="Client during a Bio-Well biofield energy assessment at Neurogenetics.my"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
               {[
                 { num: '800+', label: 'epigenetic indicators assessed' },
                 { num: 'GDV', label: 'Gas Discharge Visualisation technology' },
@@ -463,6 +576,7 @@ export default function EnergyServicePage() {
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
                   Prabhu Sithamparam, PhD
                 </p>
+              </div>
               </div>
             </div>
           </div>

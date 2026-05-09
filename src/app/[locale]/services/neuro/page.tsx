@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords: [
     'QEEG brain mapping malaysia',
     'neurofeedback therapy malaysia',
+    'ISF neurofeedback malaysia',
     'transcranial photobiomodulation malaysia',
     'brain scan malaysia',
     'ADHD neurofeedback malaysia',
@@ -38,7 +39,7 @@ const SERVICES = [
   {
     icon: '📡',
     title: 'QEEG Brain Mapping',
-    desc: 'Quantitative EEG (QEEG) measures your brainwave activity across multiple regions simultaneously. The result is a detailed brain map showing exactly which areas are over-active, under-active, or dysregulated — giving us objective data to guide your entire therapy plan.',
+    desc: 'Quantitative EEG (QEEG) measures your brainwave activity across multiple regions simultaneously. The result is a detailed brain map showing exactly which areas are over-active, under-active, or dysregulated, giving us objective data to guide your entire therapy plan.',
     detail: [
       'Full-cap electrode brain recording',
       'Eyes-open and eyes-closed assessment',
@@ -50,13 +51,14 @@ const SERVICES = [
   },
   {
     icon: '🎯',
-    title: 'Neurofeedback Therapy',
-    desc: 'Using your QEEG data as a guide, neurofeedback delivers real-time feedback to your brain, rewarding it for producing healthier brainwave patterns. Over multiple sessions, the brain learns to self-regulate — producing lasting improvements in focus, mood, sleep, and emotional control.',
+    title: 'ISF Neurofeedback Therapy',
+    desc: 'Infra Slow Fluctuation (ISF) neurofeedback operates below 0.1 Hz, targeting the deepest regulatory rhythms of the brain. Backed by over 70 years of clinical research with 15,000+ practitioners worldwide, ISF is licensed from New York and guides the brain to its optimal regulatory state, producing lasting improvements in focus, mood, sleep, and emotional control.',
     detail: [
+      'Licensed ISF protocol from New York',
       'Personalised protocol based on your QEEG results',
       'Real-time brainwave monitoring and feedback',
       'Progressive session-by-session brain retraining',
-      'Targets specific regions identified in QEEG',
+      'ISF targets deep brain regulatory networks',
       'Non-invasive, medication-free approach',
     ],
     color: '#0d9488',
@@ -78,17 +80,25 @@ const SERVICES = [
 
 const CONDITIONS = [
   'ADHD & Focus Difficulties',
-  'Anxiety & Panic',
+  'Anxiety & Panic Disorder',
   'Depression',
   'Brain Fog',
-  'Burnout',
-  'Sleep Disorders',
+  'Burnout & Chronic Stress',
+  'Sleep Disorders & Insomnia',
   'Trauma & PTSD',
-  'Cognitive Decline',
-  'Memory Issues',
+  'Cognitive Decline & Dementia',
+  'Memory & Recall Issues',
   'Emotional Dysregulation',
   'Peak Performance',
   'Post-Concussion Recovery',
+  'Autism Spectrum (ASD)',
+  'Stroke Rehabilitation',
+  'Migraine & Chronic Headaches',
+  'Parkinson\'s & Essential Tremors',
+  'Epilepsy Management',
+  'Cerebral Palsy',
+  'Traumatic Brain Injury (TBI)',
+  'Postpartum Depression',
 ];
 
 const PROCESS = [
@@ -116,6 +126,24 @@ const PROCESS = [
     step: '05',
     title: 'Progress Review',
     desc: 'Periodic QEEG reassessments track your brain\'s improvement objectively, showing measurable change over time.',
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    quote: 'After years of ADHD struggles, neurofeedback gave me back my ability to focus. The change was measurable, not just something I felt.',
+    name: 'K.L., Kuala Lumpur',
+    condition: 'ADHD',
+  },
+  {
+    quote: 'The QEEG showed exactly where my anxiety was coming from in the brain. Knowing the biological cause made the whole process feel real and hopeful.',
+    name: 'R.M., Selangor',
+    condition: 'Anxiety',
+  },
+  {
+    quote: 'Three months of neurofeedback sessions and my sleep quality transformed completely. I wake up clear-headed for the first time in years.',
+    name: 'S.T., Petaling Jaya',
+    condition: 'Sleep Disorder',
   },
 ];
 
@@ -149,10 +177,10 @@ export default function BrainServicePage() {
                 Objective Brain Assessment and Retraining
               </p>
               <p className="text-teal-100 text-base leading-relaxed max-w-xl mb-8 mx-auto lg:mx-0">
-                We assess how your brain is functioning using QEEG brain mapping, then retrain
-                brainwave patterns through neurofeedback. We also use transcranial photobiomodulation
-                to support brain function at a cellular level, enhancing focus, emotional regulation,
-                and mental clarity.
+                Every brain has a second chance. We assess how your brain is functioning using QEEG brain
+                mapping, then retrain brainwave patterns through ISF neurofeedback. Transcranial
+                photobiomodulation supports brain function at a cellular level, enhancing focus, emotional
+                regulation, and mental clarity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
@@ -171,10 +199,10 @@ export default function BrainServicePage() {
               </div>
             </div>
 
-            {/* Prabhu photo */}
-            <div className="flex-shrink-0 flex flex-col items-center gap-4">
+            {/* Images stack */}
+            <div className="flex-shrink-0 flex flex-row lg:flex-row gap-4 items-end">
               <div
-                className="relative w-56 h-64 md:w-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4"
+                className="relative w-40 h-52 md:w-52 md:h-64 rounded-3xl overflow-hidden shadow-2xl border-4"
                 style={{ borderColor: `${ACCENT}50` }}
               >
                 <Image
@@ -183,29 +211,42 @@ export default function BrainServicePage() {
                   fill
                   className="object-cover object-top"
                   priority
-                  sizes="(max-width: 768px) 224px, 288px"
+                  sizes="(max-width: 768px) 160px, 208px"
                 />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #06141490 0%, transparent 55%)' }} />
-                <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <p className="text-white font-bold text-sm">Prabhu Sithamparam</p>
-                  <p className="text-teal-200 text-xs">QEEG Specialist · Neurofeedback Therapist</p>
+                <div className="absolute bottom-3 left-0 right-0 text-center px-2">
+                  <p className="text-white font-bold text-xs">Prabhu Sithamparam</p>
+                  <p className="text-teal-200 text-xs">QEEG Specialist</p>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2 justify-center max-w-xs">
-                {['QEEG Certified', 'Neurofeedback Therapy', 'Photobiomodulation'].map((badge) => (
-                  <span
-                    key={badge}
-                    className="text-xs px-3 py-1 rounded-full font-medium"
-                    style={{ background: `${ACCENT}30`, color: '#5eead4' }}
-                  >
-                    {badge}
-                  </span>
-                ))}
+              <div
+                className="relative w-40 h-52 md:w-52 md:h-64 rounded-3xl overflow-hidden shadow-2xl border-4 mb-6"
+                style={{ borderColor: `${ACCENT}30` }}
+              >
+                <Image
+                  src="/images/neuro-session-male.jpeg"
+                  alt="Patient undergoing QEEG brain mapping session at Neurogenetics.my"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  sizes="(max-width: 768px) 160px, 208px"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #06141490 0%, transparent 60%)' }} />
+                <div className="absolute bottom-3 left-0 right-0 text-center px-2">
+                  <p className="text-teal-200 text-xs font-medium">QEEG Session</p>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
+      </section>
+
+      {/* ── Tagline banner ────────────────────────────────────────────────── */}
+      <section className="py-6 bg-teal-600 text-white text-center">
+        <p className="text-lg font-semibold tracking-wide">
+          Every brain has a second chance. We never give up.
+        </p>
       </section>
 
       {/* ── Why brain assessment changes everything ───────────────────────── */}
@@ -243,7 +284,7 @@ export default function BrainServicePage() {
             <div className="flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0">
               <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: '4/3' }}>
                 <Image
-                  src="/images/brain-therapy.png"
+                  src="/images/neuro-session-female.jpeg"
                   alt="QEEG brain mapping session at Neurogenetics.my"
                   fill
                   className="object-cover object-center"
@@ -251,6 +292,79 @@ export default function BrainServicePage() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QEEG visual ──────────────────────────────────────────────────── */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+            {/* Image */}
+            <div className="flex-shrink-0 w-full max-w-lg mx-auto lg:mx-0">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: '16/9' }}>
+                <Image
+                  src="/images/brain-scan-qeeg.jpeg"
+                  alt="QEEG brain scan result showing brainwave activity patterns"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <p className="text-xs text-center text-gray-400 dark:text-gray-500 mt-3">
+                A QEEG brain map reveals exactly which regions are over-active, under-active, or dysregulated.
+              </p>
+            </div>
+            {/* Text */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4"
+                style={{ background: `${ACCENT}20`, color: ACCENT }}>
+                What You See in a QEEG
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-900 dark:text-blue-300">
+                Your Brain, Mapped in Detail
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base mb-4">
+                A QEEG produces a colour-coded brain map showing the electrical activity across every
+                region of your cortex. Warm colours indicate over-activation. Cool colours indicate
+                under-activation. Each pattern corresponds to specific symptoms you experience.
+              </p>
+              <div className="space-y-3 mb-6">
+                {[
+                  { label: 'Excess high-frequency beta', implication: 'Anxiety, racing thoughts, hypervigilance' },
+                  { label: 'Excess slow-wave theta', implication: 'Brain fog, attention difficulties, low energy' },
+                  { label: 'Dysregulated alpha', implication: 'Sleep problems, emotional dysregulation' },
+                  { label: 'Interhemispheric asymmetry', implication: 'Mood disorders, cognitive imbalance' },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-3 text-sm">
+                    <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ background: ACCENT }} />
+                    <span className="text-gray-700 dark:text-gray-300">
+                      <strong className="text-blue-900 dark:text-blue-300">{item.label}:</strong> {item.implication}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 rounded-xl p-4 text-sm italic text-teal-800 dark:text-teal-300 border-l-4"
+                style={{ borderColor: ACCENT, background: `${ACCENT}15` }}>
+                "Why guess when you can see, quantify, and be proactive about your mental health?"
+              </div>
+            </div>
+          </div>
+
+          {/* QEEG Session Process */}
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { step: '01', title: 'Sensor Placement', desc: 'An electrode cap is fitted and saline gel applied to ensure clean signal contact across all brain regions.' },
+              { step: '02', title: 'Recording', desc: '40-minute session recording brainwave activity eyes-open and eyes-closed. Safe, non-invasive, read-only.' },
+              { step: '03', title: 'LORETA Analysis', desc: 'Results are processed using LORETA 3D mapping, analysing power, phase, coherence, and regional activity.' },
+              { step: '04', title: 'Report & Plan', desc: 'Full written report with interpretation within 48 hours. Your therapy plan is built directly from the findings.' },
+            ].map((item) => (
+              <div key={item.step} className="rounded-xl p-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <p className="text-xs font-bold mb-2" style={{ color: ACCENT }}>Step {item.step}</p>
+                <h4 className="font-bold text-sm text-blue-900 dark:text-blue-300 mb-1">{item.title}</h4>
+                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -376,6 +490,89 @@ export default function BrainServicePage() {
         </div>
       </section>
 
+      {/* ── Our Technology ───────────────────────────────────────────────── */}
+      <section className="py-16 bg-gradient-to-br from-[#0d1b2e] to-[#0f2a3a] text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">The Technology We Use</h2>
+            <p className="text-blue-200 max-w-xl mx-auto text-sm">
+              Professional-grade brain assessment and retraining equipment, the same used by
+              neurofeedback clinicians across Southeast Asia.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                image: '/images/nf-eeg-cap.jpg',
+                alt: 'QEEG electrode cap for brain mapping at Neurogenetics.my',
+                title: 'QEEG Electrode Cap',
+                desc: 'Full-cap saline electrode system for quantitative EEG brain mapping. Records brainwave activity across all cortical regions simultaneously.',
+              },
+              {
+                image: '/images/nf-helmet.png',
+                alt: 'ThinkFast photobiomodulation helmet for brain stimulation at Neurogenetics.my',
+                title: 'Photobiomodulation Helmet',
+                desc: 'Near-infrared light therapy helmet delivering targeted wavelengths to stimulate mitochondrial function and support neuroplasticity at a cellular level.',
+              },
+              {
+                image: '/images/nf-intranasal.jpg',
+                alt: 'Intranasal photobiomodulation device at Neurogenetics.my',
+                title: 'Intranasal Light Therapy',
+                desc: 'Intranasal PBM device delivering light therapy via the nasal passage for direct access to deeper brain structures and improved cellular energy production.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-sm mb-2" style={{ color: ACCENT }}>{item.title}</h3>
+                  <p className="text-xs text-blue-200 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Testimonials ─────────────────────────────────────────────────── */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 dark:text-blue-300 heading-underline-center">
+              Client Experiences
+            </h2>
+            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
+              Real outcomes from real clients who began with a QEEG brain assessment.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t) => (
+              <div key={t.name} className="glass-card rounded-2xl p-6 flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-300 italic leading-relaxed mb-4 flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="text-sm font-semibold text-blue-900 dark:text-blue-300">{t.name}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500">{t.condition}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Conditions ───────────────────────────────────────────────────── */}
       <section className="py-16 bg-gradient-to-br from-[#061f1f] to-[#082a2e] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,7 +619,7 @@ export default function BrainServicePage() {
                   {
                     icon: '⚡',
                     title: 'Triple-Modality Brain Protocol',
-                    desc: 'The combination of QEEG-guided neurofeedback and photobiomodulation addresses brain function from two angles simultaneously — electrical retraining and cellular regeneration.',
+                    desc: 'The combination of QEEG-guided ISF neurofeedback and photobiomodulation addresses brain function from two angles simultaneously: electrical retraining and cellular regeneration.',
                   },
                   {
                     icon: '📈',
@@ -447,10 +644,20 @@ export default function BrainServicePage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src="/images/child-focus.jpg"
+                  alt="Child improving focus and attention through neurofeedback at Neurogenetics.my"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
               {[
                 { num: 'QEEG', label: 'Quantitative Brain Mapping' },
-                { num: 'NFB', label: 'Neurofeedback Retraining' },
+                { num: 'ISF', label: 'Infra Slow Fluctuation Neurofeedback' },
                 { num: 'PBM', label: 'Photobiomodulation Therapy' },
                 { num: '4D', label: 'Integrated Healing Model' },
               ].map((s) => (
@@ -475,6 +682,7 @@ export default function BrainServicePage() {
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
                   Prabhu Sithamparam, PhD
                 </p>
+              </div>
               </div>
             </div>
           </div>

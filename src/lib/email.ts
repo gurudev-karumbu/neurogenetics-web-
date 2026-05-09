@@ -9,7 +9,7 @@ interface EmailOptions {
 
 const SMTP_CONFIG = {
   host: process.env.ZEPTO_SMTP_HOST ?? 'smtp.zeptomail.in',
-  port: parseInt(process.env.ZEPTO_SMTP_PORT ?? '587'),
+  port: parseInt(process.env.ZEPTO_SMTP_PORT ?? '465'),
   user: process.env.ZEPTO_SMTP_USER ?? '',
   pass: process.env.ZEPTO_SMTP_PASS ?? '',
   from: process.env.EMAIL_FROM ?? 'noreply@neurogenetics.my',
@@ -19,11 +19,13 @@ const SMTP_CONFIG = {
 export async function sendEmail(options: EmailOptions): Promise<boolean> {
   try {
     const nodemailer = (await import('nodemailer')).default;
+    const port = SMTP_CONFIG.port;
     const transporter = nodemailer.createTransport({
       host: SMTP_CONFIG.host,
-      port: SMTP_CONFIG.port,
-      secure: false,
+      port,
+      secure: port === 465,
       auth: { user: SMTP_CONFIG.user, pass: SMTP_CONFIG.pass },
+      tls: { rejectUnauthorized: false },
     });
     const toArray = Array.isArray(options.to) ? options.to : [options.to];
     await transporter.sendMail({
