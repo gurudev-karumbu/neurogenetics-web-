@@ -232,6 +232,45 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Speaking & Events ─────────────────────────────────────────────── */}
+      <section className="py-16 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold heading-underline text-blue-900 dark:text-blue-300">
+              Speaking &amp; Events
+            </h2>
+            <p className="mt-3 text-gray-500 dark:text-gray-400 text-sm max-w-2xl">
+              Prabhu regularly speaks at corporate wellness events, mental health conferences, and public workshops across Malaysia.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { src: '/images/prabhu-large-workshop-kl.jpeg', caption: 'Corporate wellness workshop — Kuala Lumpur' },
+              { src: '/images/prabhu-presenting-workshop-wide.jpeg', caption: 'Body &amp; Mind Connection seminar' },
+              { src: '/images/prabhu-speaking-event-2.jpeg', caption: 'MyEndosis health symposium' },
+              { src: '/images/prabhu-presenting-full-audience.jpeg', caption: 'Public talk — full-house audience' },
+              { src: '/images/prabhu-award-ceremony.jpeg', caption: 'Award presentation at wellness event' },
+              { src: '/images/prabhu-workshop-room-overview.jpeg', caption: 'Multi-organisational wellness conference' },
+            ].map((img) => (
+              <div key={img.src} className="relative rounded-2xl overflow-hidden shadow-md group" style={{ aspectRatio: '4/3' }}>
+                <Image
+                  src={img.src}
+                  alt={img.caption}
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <p
+                  className="absolute bottom-3 left-3 right-3 text-white text-xs font-medium leading-snug"
+                  dangerouslySetInnerHTML={{ __html: img.caption }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ───────────────────────────────────────────────────────────── */}
       <section className="py-16 text-white text-center bg-gradient-to-br from-teal-600 to-blue-900">
         <div className="max-w-2xl mx-auto px-4">
