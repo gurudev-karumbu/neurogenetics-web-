@@ -13,9 +13,10 @@ interface ServiceCardProps {
   desc: string;
   image: string;
   defaultOpen?: boolean;
+  index?: number;
 }
 
-export default function ServiceCard({ icon, title, sub, color, href, desc, image, defaultOpen = false }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, sub, color, href, desc, image, defaultOpen = false, index = 0 }: ServiceCardProps) {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
@@ -54,13 +55,13 @@ export default function ServiceCard({ icon, title, sub, color, href, desc, image
         className="overflow-hidden transition-all duration-400 ease-in-out"
         style={{ maxHeight: open ? 500 : 0, opacity: open ? 1 : 0 }}
       >
-        <div className="flex flex-col md:flex-row gap-6 pb-8 px-2">
+        <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 pb-8 px-2`}>
           {/* Text */}
-          <div className="flex-1">
-            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-5">{desc}</p>
+          <div className={`flex-1 flex flex-col ${index % 2 !== 0 ? 'items-end text-right' : 'items-start text-left'}`}>
+            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{desc}</p>
             <Link
               href={href}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-85"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-85"
               style={{ background: color }}
             >
               Explore {title} →

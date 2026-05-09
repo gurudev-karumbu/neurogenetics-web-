@@ -179,7 +179,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 md:px-8 shadow-sm">
             {SERVICES.map((s, i) => (
-              <ServiceCard key={s.title} {...s} defaultOpen={i === 0} />
+              <ServiceCard key={s.title} {...s} index={i} defaultOpen={i === 0} />
             ))}
           </div>
 
