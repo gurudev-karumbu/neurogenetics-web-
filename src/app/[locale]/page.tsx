@@ -173,8 +173,8 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {SERVICES.map((s) => (
-              <ServiceCard key={s.title} {...s} />
+            {SERVICES.map((s, i) => (
+              <ServiceCard key={s.title} {...s} defaultOpen={i === 0} />
             ))}
           </div>
 
