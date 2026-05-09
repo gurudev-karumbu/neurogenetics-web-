@@ -14,6 +14,7 @@ const SERVICES = [
     color: '#4f6fd4',
     lightClass: 'bg-blue-50 dark:bg-blue-950/40',
     href: '/services/mind',
+    image: '/images/slide-mind.png',
     desc: 'Comprehensive psychological assessments and psychotherapy to uncover deeper patterns, behaviours, and emotional challenges. Retraining the mind towards calmness, clarity, and lasting emotional resilience.',
   },
   {
@@ -23,6 +24,7 @@ const SERVICES = [
     color: '#0d9488',
     lightClass: 'bg-teal-50 dark:bg-teal-950/40',
     href: '/services/neuro',
+    image: '/images/slide-brain.png',
     desc: 'QEEG brain mapping and neurofeedback to retrain brainwave patterns, plus transcranial photobiomodulation to support brain function at a cellular level, enhancing focus, emotional regulation, and mental clarity.',
   },
   {
@@ -32,6 +34,7 @@ const SERVICES = [
     color: '#e05252',
     lightClass: 'bg-red-50 dark:bg-red-950/40',
     href: '/services/body',
+    image: '/images/slide-body.png',
     desc: 'Psychonutritional diagnostics evaluating how diet, nutrient status, and gut health influence mood and cognitive function, with targeted interventions to restore balance.',
   },
   {
@@ -41,6 +44,7 @@ const SERVICES = [
     color: '#a855f7',
     lightClass: 'bg-purple-50 dark:bg-purple-950/40',
     href: '/services/energy',
+    image: '/images/slide-energy.png',
     desc: 'Bioresonance scanning and frequency-based treatments that aim to influence the body and mind using electromagnetic frequencies, assessed through Bio-Well and Cell Wellbeing technology.',
   },
   {
@@ -50,6 +54,7 @@ const SERVICES = [
     color: '#10b981',
     lightClass: 'bg-emerald-50 dark:bg-emerald-950/40',
     href: '/services/corporate',
+    image: '/images/corporate-workshop-1.jpeg',
     desc: 'Science-driven programmes integrating psychology, neuroscience, and behavioral intelligence to enhance employee wellbeing, optimise performance, and align talent with organisational goals.',
   },
 ];
@@ -172,7 +177,7 @@ export default function HomePage() {
               Our Services
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 md:px-8 shadow-sm">
             {SERVICES.map((s, i) => (
               <ServiceCard key={s.title} {...s} defaultOpen={i === 0} />
             ))}

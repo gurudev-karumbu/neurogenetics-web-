@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface ServiceCardProps {
@@ -10,50 +11,74 @@ interface ServiceCardProps {
   lightClass: string;
   href: string;
   desc: string;
+  image: string;
   defaultOpen?: boolean;
 }
 
-export default function ServiceCard({ icon, title, sub, color, lightClass, href, desc, defaultOpen = false }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, sub, color, href, desc, image, defaultOpen = false }: ServiceCardProps) {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div
-      className={`glass-card rounded-2xl border-t-4 transition-all duration-300 overflow-hidden`}
-      style={{ borderTopColor: color }}
-    >
+    <div className="border-b border-gray-100 dark:border-gray-800 last:border-0">
+      {/* Header row */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full text-left p-6 flex items-start gap-4 cursor-pointer"
+        className="w-full flex items-center gap-4 py-5 px-2 text-left group cursor-pointer"
       >
-        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: `${color}20` }}>
+        <div
+          className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
+          style={{ background: `${color}20` }}
+        >
           {icon}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-bold text-lg mb-0.5" style={{ color }}>{title}</h3>
-          <p className="text-xs font-medium text-gray-400 dark:text-gray-500">{sub}</p>
+          <h3 className="font-bold text-base md:text-lg" style={{ color }}>{title}</h3>
+          <p className="text-xs text-gray-400 dark:text-gray-500 truncate">{sub}</p>
         </div>
-        <svg
-          className="w-5 h-5 flex-shrink-0 mt-1 transition-transform duration-300"
-          style={{ color, transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
-          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300"
+          style={{ background: `${color}15`, border: `1px solid ${color}30` }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+          <svg
+            className="w-4 h-4 transition-transform duration-300"
+            style={{ color, transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </button>
 
+      {/* Expanded content */}
       <div
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: open ? 300 : 0, opacity: open ? 1 : 0 }}
+        className="overflow-hidden transition-all duration-400 ease-in-out"
+        style={{ maxHeight: open ? 500 : 0, opacity: open ? 1 : 0 }}
       >
-        <div className="px-6 pb-6">
-          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{desc}</p>
-          <Link
-            href={href}
-            className="inline-flex items-center gap-1 text-xs font-semibold transition-opacity hover:opacity-70"
-            style={{ color }}
-          >
-            Learn more →
-          </Link>
+        <div className="flex flex-col md:flex-row gap-6 pb-8 px-2">
+          {/* Text */}
+          <div className="flex-1">
+            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-5">{desc}</p>
+            <Link
+              href={href}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-85"
+              style={{ background: color }}
+            >
+              Explore {title} →
+            </Link>
+          </div>
+          {/* Image */}
+          <div className="flex-shrink-0 w-full md:w-72 lg:w-96 rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+            <div className="relative w-full h-full" style={{ minHeight: 180 }}>
+              <Image
+                src={image}
+                alt={`${title} services at Neurogenetics.my`}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+              <div className="absolute inset-0" style={{ background: `linear-gradient(to right, transparent 60%, ${color}20)` }} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
