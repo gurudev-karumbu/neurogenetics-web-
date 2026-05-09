@@ -402,6 +402,24 @@ export default function EnergyServicePage() {
         </div>
       </section>
 
+      {/* ── Visual break ─────────────────────────────────────────────────── */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <Image
+          src="/images/energy-therapy.png"
+          alt="Bio-resonance frequency therapy at Neurogenetics.my"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 flex items-center" style={{ background: 'linear-gradient(to right, #10082099 0%, #10082040 60%, transparent 100%)' }}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-white text-xl md:text-2xl font-bold max-w-md leading-snug">
+              The body communicates through frequency. We learn to listen.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Advanced Diagnostic Technologies ─────────────────────────────── */}
       <section className="py-20 bg-gray-50 dark:bg-gray-950 transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -596,25 +614,25 @@ export default function EnergyServicePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { href: '/services/mind', icon: '🧠', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
-              { href: '/services/neuro', icon: '⚡', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
-              { href: '/services/body', icon: '🔬', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
+              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
+              { href: '/services/neuro', image: '/images/slide-brain.png', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
+              { href: '/services/body', image: '/images/slide-body.png', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
             ].map((d) => (
               <Link
                 key={d.label}
                 href={d.href}
-                className="glass-card rounded-2xl p-5 hover:shadow-xl transition-all hover:-translate-y-1 flex items-start gap-4 group"
+                className="rounded-2xl overflow-hidden relative h-48 hover:shadow-xl transition-shadow block group"
               >
-                <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
-                  style={{ background: `${d.color}15` }}
-                >
-                  {d.icon}
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-sm mb-1" style={{ color: d.color }}>{d.label}</h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{d.sub}</p>
-                  <p className="text-xs font-semibold" style={{ color: d.color }}>Learn more →</p>
+                <Image
+                  src={d.image}
+                  alt={`${d.label} dimension at Neurogenetics.my`}
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 flex flex-col justify-end p-4" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }}>
+                  <h3 className="font-bold text-base text-white mb-1" style={{ color: d.color }}>{d.label}</h3>
+                  <p className="text-xs text-gray-300">{d.sub}</p>
                 </div>
               </Link>
             ))}

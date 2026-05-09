@@ -216,23 +216,32 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Images grid */}
-            <div className="flex-1 grid grid-cols-2 gap-3 w-full max-w-md mx-auto lg:mx-0">
-              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+            <div className="flex-1 grid grid-cols-3 gap-3 w-full max-w-lg mx-auto lg:mx-0">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg mt-6">
                 <Image
                   src="/images/mother-child.jpg"
                   alt="Malaysian mother and child"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 1024px) 33vw, 17vw"
                 />
               </div>
-              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg mt-8">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+                <Image
+                  src="/images/hero-woman.png"
+                  alt="Malaysian woman in wellness consultation"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 33vw, 17vw"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg mt-6">
                 <Image
                   src="/images/wellness-woman.jpg"
                   alt="Woman meditating in wellness studio"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 1024px) 33vw, 17vw"
                 />
               </div>
             </div>
