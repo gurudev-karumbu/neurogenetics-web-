@@ -250,24 +250,31 @@ export default function AboutPage() {
 
       {/* ── Watch Prabhu Speak ────────────────────────────────────────────── */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950 transition-colors">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold heading-underline text-blue-900 dark:text-blue-300">
               Watch Prabhu Speak
             </h2>
             <p className="mt-3 text-gray-500 dark:text-gray-400 text-sm">
-              A live session on mind-body connection and integrative wellness.
+              Live sessions on mind-body connection and integrative wellness.
             </p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '16/9' }}>
-            <iframe
-              src="https://www.youtube.com/embed/XS7VcTJHjWI"
-              title="Prabhu Sithamparam — Live Wellness Session"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="w-full h-full"
-              style={{ border: 0 }}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { id: 'XS7VcTJHjWI', title: 'Prabhu Sithamparam — Live Wellness Session' },
+              { id: 'PtU92Tj_uEw', title: 'Prabhu Sithamparam — Integrative Wellness Talk' },
+            ].map((v) => (
+              <div key={v.id} className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '16/9' }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
