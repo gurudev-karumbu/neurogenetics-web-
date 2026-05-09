@@ -57,11 +57,11 @@ export default function ServiceCard({ icon, title, sub, color, href, desc, image
       >
         <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 pb-8 px-2`}>
           {/* Text */}
-          <div className={`flex-1 flex flex-col ${index % 2 !== 0 ? 'items-end text-right' : 'items-start text-left'}`}>
+          <div className={`flex-1 flex flex-col justify-between ${index % 2 !== 0 ? 'items-end text-right' : 'items-start text-left'}`}>
             <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{desc}</p>
             <Link
               href={href}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-85"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-85 mt-auto"
               style={{ background: color }}
             >
               Explore {title} →
