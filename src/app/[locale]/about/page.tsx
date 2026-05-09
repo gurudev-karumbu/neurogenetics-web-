@@ -3,6 +3,7 @@ import Footer from '@/components/public/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import SpeakingGallery from '@/components/public/SpeakingGallery';
+import YoutubeTeaser from '@/components/public/YoutubeTeaser';
 
 const QUALIFICATIONS = [
   { label: 'Doctor of Philosophy (PhD) in Psychology', org: 'University of Sedona, USA (2019–2024)' },
@@ -260,21 +261,20 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { id: 'XS7VcTJHjWI', title: 'Prabhu Sithamparam — Live Wellness Session', params: 'start=140&end=267&rel=0' },
-              { id: 'PtU92Tj_uEw', title: 'Prabhu Sithamparam — Integrative Wellness Talk', params: 'start=3922&end=4076&rel=0' },
-            ].map((v) => (
-              <div key={v.id} className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '16/9' }}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${v.id}?${v.params}`}
-                  title={v.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full"
-                  style={{ border: 0 }}
-                />
-              </div>
-            ))}
+            <YoutubeTeaser id="XS7VcTJHjWI" title="Prabhu Sithamparam — Live Wellness Session" start={140} end={267} />
+            <YoutubeTeaser id="PtU92Tj_uEw" title="Prabhu Sithamparam — Integrative Wellness Talk" start={3922} end={4076} />
+          </div>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-gray-800 dark:to-gray-800 rounded-2xl px-6 py-5">
+            <div>
+              <p className="font-bold text-blue-900 dark:text-blue-300">Ready to transform your wellbeing?</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Reach out to Prabhu directly for a personalised consultation.</p>
+            </div>
+            <Link
+              href="/contact"
+              className="flex-shrink-0 px-6 py-3 rounded-xl font-semibold text-sm bg-teal-600 hover:bg-teal-700 text-white transition-colors"
+            >
+              Book a Consultation
+            </Link>
           </div>
         </div>
       </section>
