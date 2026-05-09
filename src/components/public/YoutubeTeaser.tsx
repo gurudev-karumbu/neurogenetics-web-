@@ -38,11 +38,27 @@ function loadYouTubeApi(cb: () => void) {
 type Phase = 'idle' | 'playing' | 'ended';
 
 export default function YoutubeTeaser({ id, title, start, end }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const divRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerRef = useRef<any>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [phase, setPhase] = useState<Phase>('idle');
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      containerRef.current?.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
 
   useEffect(() => {
     let destroyed = false;
@@ -55,7 +71,6 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
           start,
           rel: 0,
           modestbranding: 1,
-          fs: 0,
           controls: 0,       // hides seekbar + all controls
           disablekb: 1,      // disables keyboard shortcuts
           iv_load_policy: 3, // no annotations
@@ -103,7 +118,7 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
   }
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black" style={{ aspectRatio: '16/9' }}>
+    <div ref={containerRef} className="relative rounded-2xl overflow-hidden shadow-lg bg-black" style={{ aspectRatio: '16/9' }}>
       {/* YouTube player — controls hidden */}
       <div ref={divRef} className="w-full h-full" title={title} />
 
@@ -122,9 +137,23 @@ export default function YoutubeTeaser({ id, title, start, end }: Props) {
         </div>
       )}
 
-      {/* Block right-click and pointer events on player while playing (prevents context menu seeking) */}
+      {/* Fullscreen button — visible while playing */}
       {phase === 'playing' && (
-        <div className="absolute inset-0" style={{ pointerEvents: 'none' }} />
+        <button
+          onClick={toggleFullscreen}
+          className="absolute bottom-3 right-3 bg-black/50 hover:bg-black/70 text-white rounded-lg p-1.5 transition-colors z-10"
+          aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+        >
+          {isFullscreen ? (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15v4.5M15 15h4.5M15 15l5.25 5.25M9 15H4.5M9 15v4.5M9 15l-5.25 5.25" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>
+          )}
+        </button>
       )}
 
       {/* Ended overlay — CTA */}
