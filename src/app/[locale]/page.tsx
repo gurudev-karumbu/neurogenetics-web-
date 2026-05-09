@@ -43,6 +43,15 @@ const SERVICES = [
     href: '/services/energy',
     desc: 'Bioresonance scanning and frequency-based treatments that aim to influence the body and mind using electromagnetic frequencies, assessed through Bio-Well and Cell Wellbeing technology.',
   },
+  {
+    icon: '🏢',
+    title: 'Corporate',
+    sub: 'Wellness & Human Capital · HRD Corp Claimable',
+    color: '#10b981',
+    lightClass: 'bg-emerald-50 dark:bg-emerald-950/40',
+    href: '/services/corporate',
+    desc: 'Science-driven programmes integrating psychology, neuroscience, and behavioral intelligence to enhance employee wellbeing, optimise performance, and align talent with organisational goals.',
+  },
 ];
 
 const CONDITIONS = [
@@ -163,7 +172,7 @@ export default function HomePage() {
               Our Services
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {SERVICES.map((s) => (
               <ServiceCard key={s.title} {...s} />
             ))}
