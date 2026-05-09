@@ -261,12 +261,12 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { id: 'XS7VcTJHjWI', title: 'Prabhu Sithamparam — Live Wellness Session' },
-              { id: 'PtU92Tj_uEw', title: 'Prabhu Sithamparam — Integrative Wellness Talk' },
+              { id: 'XS7VcTJHjWI', title: 'Prabhu Sithamparam — Live Wellness Session', params: 'rel=0' },
+              { id: 'PtU92Tj_uEw', title: 'Prabhu Sithamparam — Integrative Wellness Talk', params: 'start=3922&end=4076&rel=0' },
             ].map((v) => (
               <div key={v.id} className="rounded-2xl overflow-hidden shadow-lg" style={{ aspectRatio: '16/9' }}>
                 <iframe
-                  src={`https://www.youtube.com/embed/${v.id}`}
+                  src={`https://www.youtube.com/embed/${v.id}?${v.params}`}
                   title={v.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
