@@ -16,6 +16,11 @@ const SERVICES = [
   'Bio-Resonance — Bio-Well Analysis',
   'Bio-Resonance — Cell Wellbeing Assessment',
   'Full 4D Assessment',
+  'Corporate — Talent Discovery & Profiling',
+  'Corporate — HeartMath Resilience Training',
+  'Corporate — Leadership & Governance',
+  'Corporate — Workplace Wellness Programme',
+  'Corporate — HR Analytics & People Strategy',
   'Not sure — I need guidance',
 ];
 

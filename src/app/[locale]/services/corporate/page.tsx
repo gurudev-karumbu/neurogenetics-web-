@@ -28,6 +28,13 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg', width: 1200, height: 800, alt: 'Corporate Wellness Programmes by Neurogenetics.my in Kuala Lumpur' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Corporate Wellness & Human Capital Development | Neurogenetics.my',
+    description: 'HRD Corp claimable corporate wellness in Malaysia. Psychology, neuroscience and behavioural intelligence for peak organisational performance.',
+    images: ['https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg'],
   },
   alternates: {
     canonical: 'https://neurogenetics.my/services/corporate',

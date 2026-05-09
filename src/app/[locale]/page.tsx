@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/public/Navbar';
 import Footer from '@/components/public/Footer';
 import FourDModel from '@/components/public/FourDModel';
@@ -5,6 +6,43 @@ import HeroSlider from '@/components/public/HeroSlider';
 import ServiceCard from '@/components/public/ServiceCard';
 import Link from 'next/link';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
+  description:
+    'The Neuro-Genetics 4D Model: Mind, Brain, Body & Bio-Resonance. Holistic, science-backed mental wellbeing care in Kuala Lumpur, Malaysia. QEEG, Neurofeedback, Hypnotherapy, Functional Medicine.',
+  keywords: [
+    'neurogenetics malaysia',
+    'integrative mental health malaysia',
+    'neurofeedback therapy malaysia',
+    'QEEG brain mapping kuala lumpur',
+    'hypnotherapy malaysia',
+    'functional medicine mental health',
+    'anxiety depression treatment malaysia',
+    'holistic mental health kuala lumpur',
+    'prabhu sithamparam neurogenetics',
+    'corporate wellness malaysia',
+  ],
+  openGraph: {
+    title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
+    description:
+      'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Bio-Resonance. QEEG, Neurofeedback, Hypnotherapy & Functional Medicine in Malaysia.',
+    url: 'https://neurogenetics.my',
+    siteName: 'Neurogenetics.my',
+    locale: 'en_MY',
+    type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg', width: 1200, height: 800, alt: 'Neurogenetics.my — Integrative Mental Health Malaysia' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
+    description: 'Science-backed holistic mental health care using the 4D Model. QEEG, Neurofeedback, Hypnotherapy & Functional Medicine in Malaysia.',
+    images: ['https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg'],
+  },
+  alternates: {
+    canonical: 'https://neurogenetics.my',
+  },
+};
 
 const SERVICES = [
   {
@@ -83,9 +121,37 @@ const TESTIMONIALS = [
   },
 ];
 
+const LOCAL_BUSINESS_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: 'Neurogenetics.my',
+  url: 'https://neurogenetics.my',
+  logo: 'https://neurogenetics.my/images/neuro-logo.png',
+  image: 'https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg',
+  description: 'Integrative mental health centre in Malaysia using the 4D Model: Mind, Brain, Body & Bio-Resonance.',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'MY',
+    addressRegion: 'Kuala Lumpur',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Prabhu Sithamparam',
+    jobTitle: 'Clinical Hypnotherapist & Genetic Brain Profiling Expert',
+    url: 'https://neurogenetics.my/about',
+  },
+  medicalSpecialty: ['Psychology', 'Neurofeedback', 'Functional Medicine', 'Hypnotherapy'],
+  areaServed: ['Malaysia', 'Australia', 'New Zealand', 'Singapore', 'Canada', 'India'],
+  sameAs: ['https://www.linkedin.com/in/prabhu-sithamparam-602bb6a3/'],
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSONLD) }}
+      />
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}

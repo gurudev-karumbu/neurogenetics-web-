@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/mind-therapy-session.jpeg', width: 1200, height: 800, alt: 'Mind — Psychology & Psychotherapy at Neurogenetics.my' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mind — Psychology & Psychotherapy | Neurogenetics.my',
+    description: 'Root-cause psychotherapy and clinical hypnotherapy in Malaysia. Uncovering deeper patterns for lasting emotional resilience.',
+    images: ['https://neurogenetics.my/images/mind-therapy-session.jpeg'],
   },
   alternates: {
     canonical: 'https://neurogenetics.my/services/mind',

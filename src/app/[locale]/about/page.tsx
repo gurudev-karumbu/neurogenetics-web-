@@ -1,9 +1,45 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/public/Navbar';
 import Footer from '@/components/public/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import SpeakingGallery from '@/components/public/SpeakingGallery';
 import YoutubeTeaser from '@/components/public/YoutubeTeaser';
+
+export const metadata: Metadata = {
+  title: 'About Prabhu Sithamparam — Neurogenetics.my',
+  description:
+    'PhD Psychologist, Clinical Hypnotherapist & Genetic Brain Profiling Expert with 20+ years experience. Co-founder of Neurogenetics.my, helping clients across Malaysia, Australia, Singapore and beyond.',
+  keywords: [
+    'prabhu sithamparam',
+    'clinical hypnotherapist malaysia',
+    'phd psychologist malaysia',
+    'genetic brain profiling',
+    'neurogenetics co-founder',
+    'QEEG specialist malaysia',
+    'integrative therapist kuala lumpur',
+    'psychotherapy malaysia',
+  ],
+  openGraph: {
+    title: 'About Prabhu Sithamparam — Neurogenetics.my',
+    description:
+      'PhD Psychologist, Clinical Hypnotherapist & Genetic Brain Profiling Expert. 20+ years in Health, Wellness & Clinical Practice across Malaysia and internationally.',
+    url: 'https://neurogenetics.my/about',
+    siteName: 'Neurogenetics.my',
+    locale: 'en_MY',
+    type: 'profile',
+    images: [{ url: 'https://neurogenetics.my/images/prabhu-speaking-event-1.jpeg', width: 1200, height: 800, alt: 'Prabhu Sithamparam — Co-founder of Neurogenetics.my' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Prabhu Sithamparam — Neurogenetics.my',
+    description: 'PhD Psychologist, Clinical Hypnotherapist & Genetic Brain Profiling Expert. 20+ years in integrative mental health.',
+    images: ['https://neurogenetics.my/images/prabhu-speaking-event-1.jpeg'],
+  },
+  alternates: {
+    canonical: 'https://neurogenetics.my/about',
+  },
+};
 
 const QUALIFICATIONS = [
   { label: 'Doctor of Philosophy (PhD) in Psychology', org: 'University of Sedona, USA (2019–2024)' },
@@ -54,9 +90,30 @@ const CLIENTELE = [
   { icon: '🌏', label: 'Clients from Malaysia, Australia, NZ, Canada, India & Singapore' },
 ];
 
+const PERSON_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Prabhu Sithamparam',
+  url: 'https://neurogenetics.my/about',
+  image: 'https://neurogenetics.my/images/prabhu-speaking-event-1.jpeg',
+  jobTitle: 'Clinical Hypnotherapist & Genetic Brain Profiling Expert',
+  description: 'PhD Psychologist, Clinical Hypnotherapist, and Co-founder of Neurogenetics.my with 20+ years in health, wellness, and clinical practice.',
+  alumniOf: [
+    { '@type': 'EducationalOrganization', name: 'University of Sedona' },
+    { '@type': 'EducationalOrganization', name: 'LCCH International' },
+  ],
+  knowsAbout: ['Neurofeedback', 'QEEG Brain Mapping', 'Clinical Hypnotherapy', 'Genetic Brain Profiling', 'Functional Medicine', 'NLP'],
+  sameAs: ['https://www.linkedin.com/in/prabhu-sithamparam-602bb6a3/'],
+  worksFor: { '@type': 'Organization', name: 'Neurogenetics.my', url: 'https://neurogenetics.my' },
+};
+
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSONLD) }}
+      />
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}

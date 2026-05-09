@@ -26,6 +26,18 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg', width: 1200, height: 800, alt: 'Neurogenetics.my — Integrative Mental Health Malaysia' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
+    description: 'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Bio-Resonance.',
+    images: ['https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
 };
 

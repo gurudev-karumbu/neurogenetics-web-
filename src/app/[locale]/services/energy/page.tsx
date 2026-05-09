@@ -28,6 +28,13 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/bio-resonance-frequency.jpeg', width: 1200, height: 800, alt: 'Bio-Resonance & Frequency Therapy at Neurogenetics.my' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bio-Resonance — Resonance & Frequency Therapy | Neurogenetics.my',
+    description: 'Bio-Well analysis and frequency-based assessments in Malaysia. Addressing the energetic dimension of mental and physical health.',
+    images: ['https://neurogenetics.my/images/bio-resonance-frequency.jpeg'],
   },
   alternates: {
     canonical: 'https://neurogenetics.my/services/energy',

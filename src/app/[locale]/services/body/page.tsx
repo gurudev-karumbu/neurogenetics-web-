@@ -28,6 +28,13 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/body-nutrition.jpeg', width: 1200, height: 800, alt: 'Functional Medicine & Nutrition at Neurogenetics.my' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Body — Functional Medicine & Nutrition | Neurogenetics.my',
+    description: 'Functional medicine addressing how diet, gut health, hormones, and nutrient status drive mental health challenges at a biological level.',
+    images: ['https://neurogenetics.my/images/body-nutrition.jpeg'],
   },
   alternates: {
     canonical: 'https://neurogenetics.my/services/body',

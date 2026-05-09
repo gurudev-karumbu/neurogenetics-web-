@@ -29,6 +29,13 @@ export const metadata: Metadata = {
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
+    images: [{ url: 'https://neurogenetics.my/images/brain-scan-qeeg.jpeg', width: 1200, height: 800, alt: 'QEEG Brain Mapping & Neurofeedback at Neurogenetics.my' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brain — QEEG, Neurofeedback & Photobiomodulation | Neurogenetics.my',
+    description: 'QEEG brain mapping and neurofeedback therapy in Malaysia. See exactly how your brain functions and retrain it for lasting clarity.',
+    images: ['https://neurogenetics.my/images/brain-scan-qeeg.jpeg'],
   },
   alternates: {
     canonical: 'https://neurogenetics.my/services/neuro',
