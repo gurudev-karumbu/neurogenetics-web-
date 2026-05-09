@@ -169,45 +169,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Corporate spotlight — full-width banner, distinct B2B track */}
-          <div className="mt-6 rounded-3xl overflow-hidden bg-gradient-to-r from-[#052e16] via-[#064e3b] to-[#065f46] shadow-xl">
-            <div className="flex flex-col lg:flex-row items-center gap-0">
-              <div className="flex-1 p-8 lg:p-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-4 bg-yellow-400 text-emerald-900">
-                  🏢 For Organisations &nbsp;·&nbsp; HRD Corp Claimable
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-emerald-300 mb-3">
-                  Corporate Wellness &amp; Human Capital Development
-                </h3>
-                <p className="text-emerald-100 text-sm leading-relaxed mb-5 max-w-lg">
-                  Science-driven programmes for HR teams, leadership, and employees. Integrating
-                  psychology, neuroscience, and behavioral intelligence to optimise performance,
-                  reduce burnout, and build resilient organisations.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {['Talent Discovery', 'Mental Health Screening', 'Leadership Intelligence', 'Stress & Resilience', 'Neuro-Optimisation', 'HeartMath Coherence'].map((tag) => (
-                    <span key={tag} className="text-xs px-3 py-1 rounded-full border border-emerald-400/30 bg-emerald-400/10 text-emerald-200">{tag}</span>
-                  ))}
-                </div>
-                <Link
-                  href="/services/corporate"
-                  className="inline-block px-6 py-3 rounded-xl font-semibold text-sm bg-yellow-400 text-emerald-900 hover:bg-yellow-300 transition-colors"
-                >
-                  Explore Corporate Programmes →
-                </Link>
-              </div>
-              <div className="flex-shrink-0 w-full lg:w-80 h-56 lg:h-auto lg:self-stretch relative">
-                <Image
-                  src="/images/corporate-workshop-1.jpeg"
-                  alt="Corporate wellness workshop by Neurogenetics.my"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 320px"
-                />
-                <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-[#064e3b]/60 lg:to-transparent" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
