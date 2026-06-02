@@ -243,13 +243,13 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 flex flex-col items-center">
-            <div className="w-full max-w-2xl rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-              <div className="relative w-full aspect-video bg-slate-800 flex items-center justify-center">
+            <div className="w-full max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="relative w-full aspect-video bg-slate-800 rounded-xl flex items-center justify-center">
                 <Image
                   src="/images/brainmap-comparison.jpg"
                   alt="QEEG BrainMap comparison: Normal vs ADHD brain at Neurogenetics.my"
                   fill
-                  className="object-contain"
+                  className="object-contain rounded-xl"
                   sizes="(max-width: 768px) 100vw, 700px"
                 />
               </div>
