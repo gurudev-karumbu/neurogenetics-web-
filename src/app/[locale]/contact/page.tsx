@@ -13,8 +13,8 @@ const SERVICES = [
   'Body — Hormone & Cortisol Testing',
   'Body — Hair Tissue Mineral Analysis',
   'Body — Thyroid & Postpartum Support',
-  'Bio-Resonance — Bio-Well Analysis',
-  'Bio-Resonance — Cell Wellbeing Assessment',
+  'Resonance and Frequency — Bio-Well Analysis',
+  'Resonance and Frequency — Cell Wellbeing Assessment',
   'Full 4D Assessment',
   'Corporate — Talent Discovery & Profiling',
   'Corporate — HeartMath Resilience Training',
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     { href: '/services/mind', icon: '🧠', label: 'Mind', color: '#4f6fd4' },
                     { href: '/services/neuro', icon: '⚡', label: 'Brain', color: '#2dd4bf' },
                     { href: '/services/body', icon: '🔬', label: 'Body', color: '#e05252' },
-                    { href: '/services/energy', icon: '✨', label: 'Bio-Resonance', color: '#a855f7' },
+                    { href: '/services/energy', icon: '✨', label: 'Resonance and Frequency', color: '#a855f7' },
                   ].map((s) => (
                     <Link
                       key={s.label}

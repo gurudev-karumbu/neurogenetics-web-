@@ -14,7 +14,7 @@ const NAV_LINKS = [
       { href: '/services/mind', label: 'Mind — Psychology' },
       { href: '/services/neuro', label: 'Brain — Brain Science' },
       { href: '/services/body', label: 'Body — Functional Medicine' },
-      { href: '/services/energy', label: 'Bio-Resonance & Frequency' },
+      { href: '/services/energy', label: 'Resonance and Frequency & Frequency' },
       { href: '/services/corporate', label: 'Corporate Wellness' },
     ],
   },

@@ -173,12 +173,12 @@ export default function MindServicePage() {
                 <div className="absolute inset-0" style={{ background: `linear-gradient(to top, #0f134090 0%, transparent 55%)` }} />
                 <div className="absolute bottom-4 left-0 right-0 text-center">
                   <p className="text-white font-bold text-sm">Prabhu Sithamparam</p>
-                  <p className="text-indigo-200 text-xs">PhD in Psychology · Clinical Hypnotherapist</p>
+                  <p className="text-indigo-200 text-xs">Clinical Hypnotherapist · Psychotherapist</p>
                 </div>
               </div>
               {/* Credential badges */}
               <div className="flex flex-wrap gap-2 justify-center max-w-xs">
-                {['PhD Psychology', 'Clinical Hypnotherapist', '20+ Years Experience'].map((badge) => (
+                {['Clinical Hypnotherapist', '20+ Years Experience'].map((badge) => (
                   <span key={badge} className="text-xs px-3 py-1 rounded-full font-medium"
                     style={{ background: `${ACCENT}30`, color: '#c7d2fe' }}>
                     {badge}
@@ -383,7 +383,7 @@ export default function MindServicePage() {
                   {
                     icon: '🧑‍🎓',
                     title: '20+ Years of Clinical Experience',
-                    desc: 'Prabhu Sithamparam brings over 9 years of clinical psychotherapy and 20+ years in health and wellness, with a PhD in Psychology from the University of Sedona.',
+                    desc: 'Prabhu Sithamparam brings over 9 years of clinical psychotherapy and 20+ years in health and wellness, with advanced training in Transpersonal Counseling from the University of Sedona.',
                   },
                   {
                     icon: '🌍',
@@ -421,7 +421,6 @@ export default function MindServicePage() {
               <div className="grid grid-cols-2 gap-4">
               {[
                 { num: '9+', label: 'Years of Clinical Psychotherapy' },
-                { num: 'PhD', label: 'Psychology, University of Sedona' },
                 { num: '20+', label: 'Years in Health & Wellness' },
                 { num: '5+', label: 'Countries with Clients Served' },
               ].map((s) => (
@@ -444,7 +443,7 @@ export default function MindServicePage() {
                   healing at every dimension that holds you back.&rdquo;
                 </blockquote>
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
-                  Prabhu Sithamparam, PhD
+                  Prabhu Sithamparam
                 </p>
               </div>
               </div>
@@ -468,7 +467,7 @@ export default function MindServicePage() {
             {[
               { href: '/services/neuro', image: '/images/slide-brain.png', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
               { href: '/services/body', image: '/images/slide-body.png', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
-              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Bio-Resonance', sub: 'Resonance & Frequency', color: '#a855f7' },
+              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (
               <Link
                 key={d.label}

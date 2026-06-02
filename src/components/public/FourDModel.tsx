@@ -6,7 +6,7 @@ const DIMENSIONS = [
   {
     id: 'mind',
     label: 'Mind',
-    subtitle: 'Psychology & Psychotherapy',
+    subtitle: 'Psychotherapy',
     color: '#4f6fd4',
     lightColor: '#e8ecf7',
     darkColor: 'rgba(79,111,212,0.15)',
@@ -27,7 +27,7 @@ const DIMENSIONS = [
     href: '/services/neuro',
     services: ['QEEG Brain Mapping', 'Neurofeedback Therapy', 'Transcranial Photobiomodulation'],
     description:
-      'We assess how your brain is functioning using QEEG brain mapping, then retrain brainwave patterns through neurofeedback. We also use transcranial photobiomodulation to support brain function at a cellular level, enhancing focus, emotional regulation, and mental clarity.',
+      'A combined approach using QEEG brain mapping, neurofeedback training, and transcranial photobiomodulation to assess, retrain, and support brain function at both network and cellular levels enhancing cognitive performance, emotional stability, and mental clarity.',
   },
   {
     id: 'body',
@@ -44,7 +44,7 @@ const DIMENSIONS = [
   },
   {
     id: 'energy',
-    label: 'Bio-Resonance',
+    label: 'Resonance and Frequency',
     subtitle: 'Resonance & Frequency',
     color: '#a855f7',
     lightColor: '#f0ebfe',

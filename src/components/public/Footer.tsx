@@ -24,7 +24,7 @@ export default function Footer() {
               </p>
             </Link>
             <p className="text-sm text-blue-200 leading-relaxed">
-              Integrative mental health using the Neuro-Genetics 4D Model — Mind, Brain, Body &amp; Bio-Resonance.
+              Integrative mental health using the Neuro-Genetics 4D Model — Mind, Brain, Body &amp; Resonance and Frequency.
             </p>
             <p className="text-sm text-blue-200 mt-4">
               <strong className="text-white">Malaysia</strong><br />
@@ -39,7 +39,7 @@ export default function Footer() {
               <li><Link href="/services/mind" className="hover:text-white transition-colors">Mind — Psychology &amp; Therapy</Link></li>
               <li><Link href="/services/neuro" className="hover:text-white transition-colors">Brain — Brain Science</Link></li>
               <li><Link href="/services/body" className="hover:text-white transition-colors">Body — Functional Medicine</Link></li>
-              <li><Link href="/services/energy" className="hover:text-white transition-colors">Bio-Resonance &amp; Frequency</Link></li>
+              <li><Link href="/services/energy" className="hover:text-white transition-colors">Resonance and Frequency &amp; Frequency</Link></li>
               <li><Link href="/services/corporate" className="hover:text-white transition-colors">Corporate Wellness</Link></li>
             </ul>
           </div>

@@ -209,24 +209,6 @@ export default function BrainServicePage() {
             {/* Images stack */}
             <div className="flex-shrink-0 flex flex-row lg:flex-row gap-4 items-end">
               <div
-                className="relative w-40 h-52 md:w-52 md:h-64 rounded-3xl overflow-hidden shadow-2xl border-4"
-                style={{ borderColor: `${ACCENT}50` }}
-              >
-                <Image
-                  src="/images/prabhu.jpg"
-                  alt="Prabhu Sithamparam, QEEG and Neurofeedback specialist at Neurogenetics.my"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 768px) 160px, 208px"
-                />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #06141490 0%, transparent 55%)' }} />
-                <div className="absolute bottom-3 left-0 right-0 text-center px-2">
-                  <p className="text-white font-bold text-xs">Prabhu Sithamparam</p>
-                  <p className="text-teal-200 text-xs">QEEG Specialist</p>
-                </div>
-              </div>
-              <div
                 className="relative w-40 h-52 md:w-52 md:h-64 rounded-3xl overflow-hidden shadow-2xl border-4 mb-6"
                 style={{ borderColor: `${ACCENT}30` }}
               >
@@ -687,7 +669,7 @@ export default function BrainServicePage() {
                   and measurable target.&rdquo;
                 </blockquote>
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
-                  Prabhu Sithamparam, PhD
+                  Prabhu Sithamparam
                 </p>
               </div>
               </div>
@@ -711,7 +693,7 @@ export default function BrainServicePage() {
             {[
               { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
               { href: '/services/body', image: '/images/slide-body.png', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
-              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Bio-Resonance', sub: 'Resonance & Frequency', color: '#a855f7' },
+              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (
               <Link
                 key={d.label}

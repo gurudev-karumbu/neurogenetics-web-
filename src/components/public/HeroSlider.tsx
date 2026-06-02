@@ -103,7 +103,7 @@ const SLIDES = [
   {
     id: 'energy',
     tag: 'Dimension 04',
-    headline: 'Bio-Resonance\nTherapy',
+    headline: 'Resonance and Frequency\nTherapy',
     sub: 'Resonance & Frequency',
     desc: 'Bioresonance scanning and frequency-based treatments aim to influence the body and mind using electromagnetic frequencies, evaluated through Bio-Well and Cell Wellbeing technology.',
     image: '/images/slide-energy.png',
@@ -115,7 +115,7 @@ const SLIDES = [
     accentTextDark: 'text-purple-900',
     glow: '#c084fc',
     bg: ['#100820', '#1a0a30', '#0d0618'],
-    cta: { label: 'Explore Bio-Resonance', href: '/services/energy' },
+    cta: { label: 'Explore Resonance and Frequency', href: '/services/energy' },
     ctaSecondary: { label: 'Book a Consultation', href: '/contact' },
     badge: '✨',
   },

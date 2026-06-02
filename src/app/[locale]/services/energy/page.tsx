@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Bio-Resonance — Resonance & Frequency Therapy | Neurogenetics.my',
+  title: 'Resonance and Frequency — Resonance & Frequency Therapy | Neurogenetics.my',
   description:
     'Bio-Well analysis, Cell Wellbeing assessment, and advanced frequency-based diagnostics in Malaysia. Understanding and supporting the body\'s energy field for holistic mental and physical wellbeing.',
   keywords: [
@@ -21,18 +21,18 @@ export const metadata: Metadata = {
     'integrative wellness malaysia',
   ],
   openGraph: {
-    title: 'Bio-Resonance — Resonance & Frequency Therapy | Neurogenetics.my',
+    title: 'Resonance and Frequency — Resonance & Frequency Therapy | Neurogenetics.my',
     description:
       'Bioresonance scanning and frequency-based assessments through Bio-Well and Cell Wellbeing technology, addressing the energetic dimension of mental and physical health.',
     url: 'https://neurogenetics.my/services/energy',
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
     type: 'website',
-    images: [{ url: 'https://neurogenetics.my/images/bio-resonance-frequency.jpeg', width: 1200, height: 800, alt: 'Bio-Resonance & Frequency Therapy at Neurogenetics.my' }],
+    images: [{ url: 'https://neurogenetics.my/images/bio-resonance-frequency.jpeg', width: 1200, height: 800, alt: 'Resonance and Frequency & Frequency Therapy at Neurogenetics.my' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bio-Resonance — Resonance & Frequency Therapy | Neurogenetics.my',
+    title: 'Resonance and Frequency — Resonance & Frequency Therapy | Neurogenetics.my',
     description: 'Bio-Well analysis and frequency-based assessments in Malaysia. Addressing the energetic dimension of mental and physical health.',
     images: ['https://neurogenetics.my/images/bio-resonance-frequency.jpeg'],
   },
@@ -100,7 +100,7 @@ const ADVANCED_DIAGNOSTICS = [
   },
   {
     icon: '〰️',
-    title: 'Bio-Resonance Interaction Analysis',
+    title: 'Resonance and Frequency Interaction Analysis',
     subtitle: 'Systemic Frequency Response Mapping',
     desc: 'Every biological system operates through electrical and vibrational signalling networks. This analysis evaluates how biological systems respond to external frequency stimulation and internal regulatory feedback loops. It identifies system coherence versus dissonance patterns, adaptive capacity, and functional stress signatures across the body\'s regulatory systems.',
     color: '#7c3aed',
@@ -140,7 +140,7 @@ const PROCESS = [
   {
     step: '01',
     title: 'Initial Consultation',
-    desc: 'A conversation covering your concerns, health history, and goals to determine which Bio-Resonance assessments are most relevant.',
+    desc: 'A conversation covering your concerns, health history, and goals to determine which Resonance and Frequency assessments are most relevant.',
   },
   {
     step: '02',
@@ -155,7 +155,7 @@ const PROCESS = [
   {
     step: '04',
     title: 'Integrated Interpretation',
-    desc: 'Findings from Bio-Resonance are interpreted alongside Mind and Brain data for a complete, 4D picture of your health.',
+    desc: 'Findings from Resonance and Frequency are interpreted alongside Mind and Brain data for a complete, 4D picture of your health.',
   },
   {
     step: '05',
@@ -185,7 +185,7 @@ export default function EnergyServicePage() {
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 border"
                 style={{ background: `${ACCENT}25`, color: '#d8b4fe', borderColor: `${ACCENT}50` }}
               >
-                ✨ Dimension 04 · Bio-Resonance
+                ✨ Dimension 04 · Resonance and Frequency
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 text-purple-300">
                 Resonance &amp;<br />Frequency Therapy
@@ -216,25 +216,19 @@ export default function EnergyServicePage() {
               </div>
             </div>
 
-            {/* Prabhu photo */}
-            <div className="flex-shrink-0 flex flex-col items-center gap-4">
+            {/* Einstein quote card */}
+            <div className="flex-1 flex flex-col items-center gap-4 w-full">
               <div
-                className="relative w-56 h-64 md:w-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4"
-                style={{ borderColor: `${ACCENT}50` }}
+                className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4"
+                style={{ borderColor: `${ACCENT}50`, boxShadow: `0 0 40px ${ACCENT}30` }}
               >
                 <Image
-                  src="/images/prabhu.jpg"
-                  alt="Prabhu Sithamparam, Bio-Resonance and integrative wellness practitioner at Neurogenetics.my"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 768px) 224px, 288px"
+                  src="/images/einstein-quote.jpg"
+                  alt="Future Medicine will be the Medicine of Frequencies — Albert Einstein"
+                  width={480}
+                  height={320}
+                  className="w-full h-auto"
                 />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #10082090 0%, transparent 55%)' }} />
-                <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <p className="text-white font-bold text-sm">Prabhu Sithamparam</p>
-                  <p className="text-purple-200 text-xs">Bio-Well Practitioner · Integrative Wellness</p>
-                </div>
               </div>
               <div className="flex flex-wrap gap-2 justify-center max-w-xs">
                 {['Bio-Well Analysis', 'Cell Wellbeing', 'Frequency Mapping'].map((badge) => (
@@ -253,7 +247,7 @@ export default function EnergyServicePage() {
         </div>
       </section>
 
-      {/* ── What is Bio-Resonance ─────────────────────────────────────────── */}
+      {/* ── What is Resonance and Frequency ─────────────────────────────────────────── */}
       <section className="py-16 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -284,13 +278,13 @@ export default function EnergyServicePage() {
                     When they are disrupted, symptoms emerge that often have no clear conventional explanation.
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base mb-4">
-                    Bio-Resonance therapy works with these energetic frequencies directly, assessing
+                    Resonance and Frequency therapy works with these energetic frequencies directly, assessing
                     the biofield through Bio-Well technology, evaluating epigenetic influences through
                     Cell Wellbeing analysis, and applying targeted frequency support to restore coherence
                     and balance.
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
-                    As the fourth dimension of the Neurogenetics 4D model, Bio-Resonance completes the
+                    As the fourth dimension of the Neurogenetics 4D model, Resonance and Frequency completes the
                     picture that Mind, Brain, and Body begin, addressing the aspects of health that
                     conventional approaches do not yet fully account for.
                   </p>
@@ -305,7 +299,7 @@ export default function EnergyServicePage() {
       <section className="py-16 bg-gradient-to-br from-[#100820] to-[#1a0a30] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">How Bio-Resonance Completes the 4D Model</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">How Resonance and Frequency Completes the 4D Model</h2>
             <p className="text-purple-200 max-w-xl mx-auto text-sm">
               Each dimension of the Neurogenetics model informs and supports the others.
             </p>
@@ -315,7 +309,7 @@ export default function EnergyServicePage() {
               { href: '/services/mind', icon: '🧠', label: 'Mind', desc: 'Psychological patterns and subconscious root causes', color: '#4f6fd4' },
               { href: '/services/neuro', icon: '⚡', label: 'Brain', desc: 'Brainwave activity and neural regulation via QEEG', color: '#2dd4bf' },
               { href: '/services/body', icon: '🔬', label: 'Body', desc: 'Gut health, hormones, and nutritional biochemistry', color: '#e05252' },
-              { href: '/services/energy', icon: '✨', label: 'Bio-Resonance', desc: 'Biofield coherence, epigenetics, and frequency balance', color: ACCENT },
+              { href: '/services/energy', icon: '✨', label: 'Resonance and Frequency', desc: 'Biofield coherence, epigenetics, and frequency balance', color: ACCENT },
             ].map((d) => (
               <Link
                 key={d.label}
@@ -368,7 +362,7 @@ export default function EnergyServicePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 dark:text-blue-300 heading-underline-center">
-              Our Bio-Resonance Assessments
+              Our Resonance and Frequency Assessments
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
               Three complementary technologies that together provide a complete energetic picture.
@@ -497,7 +491,7 @@ export default function EnergyServicePage() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Conditions We Support</h2>
             <p className="text-purple-200 max-w-xl mx-auto text-sm">
-              Bio-Resonance is particularly valuable when symptoms are persistent, unexplained, or
+              Resonance and Frequency is particularly valuable when symptoms are persistent, unexplained, or
               have not fully responded to conventional approaches.
             </p>
           </div>
@@ -515,13 +509,13 @@ export default function EnergyServicePage() {
         </div>
       </section>
 
-      {/* ── Why Neurogenetics for Bio-Resonance ──────────────────────────── */}
+      {/* ── Why Neurogenetics for Resonance and Frequency ──────────────────────────── */}
       <section className="py-16 bg-white dark:bg-gray-900 transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-6 heading-underline text-blue-900 dark:text-blue-300">
-                Why Include Bio-Resonance in Your Healing?
+                Why Include Resonance and Frequency in Your Healing?
               </h2>
               <div className="space-y-5">
                 {[
@@ -538,7 +532,7 @@ export default function EnergyServicePage() {
                   {
                     icon: '🔗',
                     title: 'Integrated with All Four Dimensions',
-                    desc: 'Bio-Resonance findings are interpreted alongside QEEG, psychological, and functional health data, ensuring every dimension of your wellbeing is addressed.',
+                    desc: 'Resonance and Frequency findings are interpreted alongside QEEG, psychological, and functional health data, ensuring every dimension of your wellbeing is addressed.',
                   },
                   {
                     icon: '📊',
@@ -595,11 +589,11 @@ export default function EnergyServicePage() {
               >
                 <blockquote className="text-sm text-gray-600 dark:text-gray-300 italic leading-relaxed text-center">
                   &ldquo;True healing accounts for every dimension of the person. When the energy
-                  dimension is ignored, we often find that progress plateaus. Bio-Resonance
+                  dimension is ignored, we often find that progress plateaus. Resonance and Frequency
                   addresses what the other sciences cannot yet fully measure.&rdquo;
                 </blockquote>
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
-                  Prabhu Sithamparam, PhD
+                  Prabhu Sithamparam
                 </p>
               </div>
               </div>
@@ -616,7 +610,7 @@ export default function EnergyServicePage() {
               Explore the Full 4D Model
             </h2>
             <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
-              Bio-Resonance is most powerful when combined with all four dimensions of the Neurogenetics healing model.
+              Resonance and Frequency is most powerful when combined with all four dimensions of the Neurogenetics healing model.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -655,7 +649,7 @@ export default function EnergyServicePage() {
             Ready to Explore Your Energetic Dimension?
           </h2>
           <p className="text-purple-100 mb-8 text-sm leading-relaxed max-w-lg mx-auto">
-            A Bio-Resonance assessment adds a powerful layer to your healing journey. Book a
+            A Resonance and Frequency assessment adds a powerful layer to your healing journey. Book a
             consultation with Prabhu to discover what the energy dimension reveals about your
             health and wellbeing.
           </p>

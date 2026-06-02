@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
-    description: 'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Bio-Resonance.',
+    description: 'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Resonance and Frequency.',
     images: ['https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg'],
   },
   robots: {

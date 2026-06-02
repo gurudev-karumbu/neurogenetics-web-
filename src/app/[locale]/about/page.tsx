@@ -42,8 +42,7 @@ export const metadata: Metadata = {
 };
 
 const QUALIFICATIONS = [
-  { label: 'Doctor of Philosophy (PhD) in Psychology', org: 'University of Sedona, USA (2019–2024)' },
-  { label: 'Practitioner Diploma in Clinical Hypnosis', org: 'LCCH International (2011–2012)' },
+  { label: 'Currently pursuing PDH in Transpersonal Counseling', org: 'University of Sedona' },
   { label: 'Certificate in Neuro Linguistic Programming (NLP)', org: 'LCCH International (2014)' },
   { label: 'Practitioner Certificate in Cognitive Science', org: 'The Academy for Modern Applied Psychology (Achology)' },
   { label: 'Certified NLP Practitioner, IGNLP (UK)', org: 'Professional Member (UK)' },
@@ -148,7 +147,7 @@ export default function AboutPage() {
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-sm text-blue-200 mb-6">
                 <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> 20+ years in Health, Wellness &amp; Fitness</span>
                 <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> 9+ years Clinical Psychotherapy</span>
-                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> PhD in Psychology, University of Sedona</span>
+                <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> Pursuing Transpersonal Counseling, University of Sedona</span>
                 <span className="flex items-center gap-1.5"><span className="text-yellow-400">✦</span> Clinical Hypnotherapist &amp; Genetic Brain Profiling Expert</span>
               </div>
               <p className="text-blue-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-6">
@@ -270,6 +269,26 @@ export default function AboutPage() {
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{s.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Webinar Video ─────────────────────────────────────────────────── */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 heading-underline text-blue-900 dark:text-blue-300">
+            Clinical Hypnotherapy Webinar
+          </h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            A Live Interactive Session — Unveiling The Healing Power Within (May 14, 2026)
+          </p>
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://drive.google.com/file/d/1ESWOKRxvWUPx9QkUfoaH9yqj8oYXZQLd/preview"
+              className="absolute inset-0 w-full h-full rounded-lg"
+              allow="autoplay"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

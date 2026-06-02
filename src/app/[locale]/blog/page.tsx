@@ -16,7 +16,7 @@ const TOPICS = [
   { icon: '💡', label: 'Photobiomodulation' },
   { icon: '🥗', label: 'Functional Nutrition' },
   { icon: '🦠', label: 'Gut-Brain Connection' },
-  { icon: '✨', label: 'Bio-Resonance & Frequency' },
+  { icon: '✨', label: 'Resonance and Frequency & Frequency' },
   { icon: '🌿', label: 'Integrative Mental Health' },
 ];
 

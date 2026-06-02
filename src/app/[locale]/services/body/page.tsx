@@ -190,25 +190,21 @@ export default function BodyServicePage() {
               </div>
             </div>
 
-            {/* Prabhu photo */}
+            {/* Hero image */}
             <div className="flex-shrink-0 flex flex-col items-center gap-4">
               <div
                 className="relative w-56 h-64 md:w-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4"
                 style={{ borderColor: `${ACCENT}50` }}
               >
                 <Image
-                  src="/images/prabhu.jpg"
-                  alt="Prabhu Sithamparam, Functional Medicine practitioner at Neurogenetics.my"
+                  src="/images/body-therapy.png"
+                  alt="Functional medicine and body therapy at Neurogenetics.my"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   priority
                   sizes="(max-width: 768px) 224px, 288px"
                 />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #20040490 0%, transparent 55%)' }} />
-                <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <p className="text-white font-bold text-sm">Prabhu Sithamparam</p>
-                  <p className="text-red-200 text-xs">Functional Medicine · Psychonutritional Diagnostics</p>
-                </div>
               </div>
               <div className="flex flex-wrap gap-2 justify-center max-w-xs">
                 {['Functional Nutrition', 'Hormone Testing', 'HTMA Analysis'].map((badge) => (
@@ -521,7 +517,7 @@ export default function BodyServicePage() {
                   entirely. The body always has something to say.&rdquo;
                 </blockquote>
                 <p className="text-center text-xs font-semibold mt-3" style={{ color: ACCENT }}>
-                  Prabhu Sithamparam, PhD
+                  Prabhu Sithamparam
                 </p>
               </div>
               </div>
@@ -545,7 +541,7 @@ export default function BodyServicePage() {
             {[
               { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
               { href: '/services/neuro', image: '/images/slide-brain.png', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
-              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Bio-Resonance', sub: 'Resonance & Frequency', color: '#a855f7' },
+              { href: '/services/energy', image: '/images/slide-energy.png', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (
               <Link
                 key={d.label}

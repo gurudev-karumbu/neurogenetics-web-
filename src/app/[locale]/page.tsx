@@ -10,7 +10,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
   description:
-    'The Neuro-Genetics 4D Model: Mind, Brain, Body & Bio-Resonance. Holistic, science-backed mental wellbeing care in Kuala Lumpur, Malaysia. QEEG, Neurofeedback, Hypnotherapy, Functional Medicine.',
+    'The Neuro-Genetics 4D Model: Mind, Brain, Body & Resonance and Frequency. Holistic, science-backed mental wellbeing care in Kuala Lumpur, Malaysia. QEEG, Neurofeedback, Hypnotherapy, Functional Medicine.',
   keywords: [
     'neurogenetics malaysia',
     'integrative mental health malaysia',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Neurogenetics.my — Integrative Mental Health Malaysia',
     description:
-      'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Bio-Resonance. QEEG, Neurofeedback, Hypnotherapy & Functional Medicine in Malaysia.',
+      'Science-backed holistic mental health care using the 4D Model: Mind, Brain, Body & Resonance and Frequency. QEEG, Neurofeedback, Hypnotherapy & Functional Medicine in Malaysia.',
     url: 'https://neurogenetics.my',
     siteName: 'Neurogenetics.my',
     locale: 'en_MY',
@@ -77,7 +77,7 @@ const SERVICES = [
   },
   {
     icon: '✨',
-    title: 'Bio-Resonance',
+    title: 'Resonance and Frequency',
     sub: 'Resonance & Frequency',
     color: '#a855f7',
     lightClass: 'bg-purple-50 dark:bg-purple-950/40',
@@ -128,7 +128,7 @@ const LOCAL_BUSINESS_JSONLD = {
   url: 'https://neurogenetics.my',
   logo: 'https://neurogenetics.my/images/neuro-logo.png',
   image: 'https://neurogenetics.my/images/prabhu-large-workshop-kl.jpeg',
-  description: 'Integrative mental health centre in Malaysia using the 4D Model: Mind, Brain, Body & Bio-Resonance.',
+  description: 'Integrative mental health centre in Malaysia using the 4D Model: Mind, Brain, Body & Resonance and Frequency.',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'MY',
@@ -216,6 +216,23 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 flex flex-col items-center">
+            <div className="w-full max-w-2xl rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+              <div className="relative w-full aspect-video bg-slate-800 flex items-center justify-center">
+                <Image
+                  src="/images/brainmap-comparison.jpg"
+                  alt="QEEG BrainMap comparison showing before and after neurofeedback at Neurogenetics.my"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 700px"
+                />
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-blue-200 italic text-center max-w-xl">
+              &ldquo;The brain is an organ, and you can&rsquo;t treat what you cannot see.&rdquo; &mdash; Dr. Daniel Amen
+            </p>
+          </div>
         </div>
       </section>
 
@@ -226,9 +243,11 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold heading-underline-center text-blue-900 dark:text-blue-300">
               The Neuro-Genetics 4D Model
             </h2>
-            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-              Mental health challenges rarely arise from a single cause. Our model examines all four
-              dimensions simultaneously. Click each to discover how they interact.
+            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
+              The Integrative 4D Model — Mental health is rarely driven by a single factor. This
+              framework integrates four interconnected dimensions to deliver a comprehensive view of
+              human mental wellbeing and its underlying drivers. Explore each dimension to see how
+              they dynamically interact.
             </p>
           </div>
           <FourDModel />
@@ -291,21 +310,31 @@ export default function HomePage() {
               <h2 className="text-3xl font-bold mb-6 heading-underline text-blue-900 dark:text-blue-300">
                 Why Integrative Care?
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-base">
-                A thyroid imbalance can cause depression. A disrupted cortisol cycle can trigger anxiety.
-                Unresolved trauma can rewire brainwave patterns. When we treat only the surface symptoms
-                through medication or therapy alone, we miss the deeper picture entirely.
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 text-base">
+                Mental health and brain function are never driven by a single cause. A thyroid
+                imbalance can manifest as depression. A disrupted cortisol rhythm can trigger anxiety
+                and fatigue. Unresolved trauma can reshape neural pathways and alter brainwave patterns
+                over time. Even inflammation, nutrient deficiencies, and chronic stress can silently
+                influence emotional and cognitive health.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 text-base">
+                When we only treat surface symptoms through medication or talk therapy alone, we often
+                miss the deeper biological, neurological, and emotional drivers of the condition.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 text-base">
+                That is why we use an integrative, multi-layered approach.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
                 The Neuro-Genetics 4D Model evaluates all four dimensions at once, uncovering the{' '}
-                <strong className="text-blue-900 dark:text-blue-300">root causes</strong> rather than just managing
-                surface symptoms, so that your recovery is complete, lasting, and truly your own.
+                <strong className="text-blue-900 dark:text-blue-300">root causes</strong> rather than
+                just managing surface symptoms, so that your recovery is complete, lasting, and truly
+                your own.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
                   { num: '4', label: 'Integrated Dimensions' },
-                  { num: '10+', label: 'Conditions Addressed' },
-                  { num: '~2 months', label: 'Avg. Anxiety Recovery' },
+                  { num: '25+', label: 'Conditions Addressed' },
+                  { num: '15+', label: 'Types of Assessments' },
                   { num: '1', label: 'Comprehensive Assessment' },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center">

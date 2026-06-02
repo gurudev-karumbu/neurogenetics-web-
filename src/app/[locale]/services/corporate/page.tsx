@@ -454,7 +454,7 @@ export default function CorporateServicePage() {
               Looking for Individual Services?
             </h2>
             <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm">
-              Our 4D model for personal healing addresses Mind, Brain, Body, and Bio-Resonance.
+              Our 4D model for personal healing addresses Mind, Brain, Body, and Resonance and Frequency.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
@@ -462,7 +462,7 @@ export default function CorporateServicePage() {
               { href: '/services/mind', icon: '🧠', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
               { href: '/services/neuro', icon: '⚡', label: 'Brain', sub: 'QEEG & Neurofeedback', color: '#2dd4bf' },
               { href: '/services/body', icon: '🔬', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
-              { href: '/services/energy', icon: '✨', label: 'Bio-Resonance', sub: 'Resonance & Frequency', color: '#a855f7' },
+              { href: '/services/energy', icon: '✨', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (
               <Link
                 key={d.label}
