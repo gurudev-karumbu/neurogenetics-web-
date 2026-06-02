@@ -19,7 +19,7 @@ const DIMENSIONS = [
   {
     id: 'neuro',
     label: 'Brain',
-    subtitle: 'QEEG, Neurofeedback & Transcranial Photobiomodulation',
+    subtitle: 'Advanced Brain Regulation & Optimization',
     color: '#2dd4bf',
     lightColor: '#e0f5f3',
     darkColor: 'rgba(45,212,191,0.15)',

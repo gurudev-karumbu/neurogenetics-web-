@@ -615,7 +615,7 @@ export default function EnergyServicePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
+              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychotherapy', color: '#4f6fd4' },
               { href: '/services/neuro', image: '/images/slide-brain.png', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
               { href: '/services/body', image: '/images/slide-body.png', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
             ].map((d) => (

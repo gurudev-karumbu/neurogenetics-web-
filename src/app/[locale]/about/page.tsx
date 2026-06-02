@@ -42,7 +42,8 @@ export const metadata: Metadata = {
 };
 
 const QUALIFICATIONS = [
-  { label: 'Currently pursuing PDH in Transpersonal Counseling', org: 'University of Sedona' },
+  { label: 'Doctor of Philosophy (PhD) in Transpersonal Counseling (In Progress)', org: 'University of Sedona' },
+  { label: 'Professional Certification in Clinical Hypnotherapy', org: 'LCCH International (2010)' },
   { label: 'Certificate in Neuro Linguistic Programming (NLP)', org: 'LCCH International (2014)' },
   { label: 'Practitioner Certificate in Cognitive Science', org: 'The Academy for Modern Applied Psychology (Achology)' },
   { label: 'Certified NLP Practitioner, IGNLP (UK)', org: 'Professional Member (UK)' },
@@ -171,6 +172,43 @@ export default function AboutPage() {
                 Connect on LinkedIn
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── About Us ─────────────────────────────────────────────────────── */}
+      <section className="py-16 bg-blue-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 heading-underline text-blue-900 dark:text-blue-300">
+            About Us
+          </h2>
+          <div className="space-y-4 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+            <p>
+              We are a team of mental health and wellness professionals, including psychologists,
+              psychotherapists, functional medicine doctors, genetic counselors, and neurotherapy
+              specialists, with over 12 years of experience in mental health and brain science.
+            </p>
+            <p>
+              We take an integrative approach that combines psychology, neuroscience, functional
+              medicine, and nutrition to understand how the brain, body, and emotions are connected.
+            </p>
+            <p>
+              Our care includes Functional Medicine, QEEG brain mapping, Transcranial
+              Photobiomodulation (PBM), psychotherapy, nutrition support, and biofeedback. These
+              tools help us create personalized treatment plans to improve mental, emotional, and
+              cognitive health. Our services also include mental health therapy, clinical
+              hypnotherapy, psychological assessments, brain scans, neurotherapy, genetic and DNA
+              testing, and functional medicine evaluation.
+            </p>
+            <p>
+              We support individuals from early childhood to adulthood, including children,
+              teenagers, and adults, with conditions such as ADHD, autism spectrum conditions,
+              anxiety, depression, chronic pain, phobias, and stress-related issues.
+            </p>
+            <p>
+              Our goal is to go beyond symptoms and understand the root causes, helping each person
+              improve their overall well-being and reach their full potential.
+            </p>
           </div>
         </div>
       </section>

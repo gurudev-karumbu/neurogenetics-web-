@@ -82,6 +82,19 @@ const SERVICES = [
     color: '#c94949',
   },
   {
+    icon: '🧬',
+    title: 'DNA & Epigenetic Testing',
+    desc: 'Your genes provide a blueprint for how your body and brain function, but they are not your destiny. Through DNA testing, we identify genetic predispositions related to mood, stress response, detoxification, inflammation, and neurotransmitter function. By understanding these patterns, we can influence how your genes are expressed through targeted lifestyle, nutrition, and therapeutic interventions. This is the science of epigenetics.',
+    detail: [
+      'Genetic analysis of mood, stress, and cognitive function markers',
+      'Neurotransmitter and methylation pathway insights',
+      'Detoxification and inflammation-related gene markers',
+      'Stress resilience and brain performance profiling',
+      'Personalised epigenetic optimisation protocol (nutrition, lifestyle, supplementation)',
+    ],
+    color: '#b84040',
+  },
+  {
     icon: '🤱',
     title: 'Thyroid & Postpartum Support',
     desc: 'Thyroid dysfunction and postpartum hormonal shifts are leading but frequently missed causes of depression, anxiety, and cognitive difficulties in women. We provide specialist assessment and integrative support that addresses the underlying physiology, not just the emotional symptoms.',
@@ -410,6 +423,39 @@ export default function BodyServicePage() {
         </div>
       </section>
 
+      {/* ── DNA Metabolic Pathway ────────────────────────────────────────── */}
+      <section className="py-12 bg-white dark:bg-gray-900 transition-colors">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-lg font-bold mb-3 text-blue-900 dark:text-blue-300">
+            Personalised DNA Sequencing of Metabolic Pathway
+          </h3>
+          <div className="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
+            <Image
+              src="/images/dna-metabolic-pathway.jpg"
+              alt="Personalised DNA sequencing metabolic pathway chart showing dopamine, serotonin, cortisol, and neurotransmitter pathways"
+              width={1200}
+              height={900}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Einstein quote ───────────────────────────────────────────────── */}
+      <section className="py-12 bg-gray-50 dark:bg-gray-950 transition-colors">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-xl border-2 border-red-200 dark:border-red-900">
+            <Image
+              src="/images/einstein-quote.jpg"
+              alt="Future medicine will be the medicine of frequencies — Albert Einstein"
+              width={480}
+              height={320}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── Conditions ───────────────────────────────────────────────────── */}
       <section className="py-16 bg-gradient-to-br from-[#200a0a] to-[#2d1010] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -539,7 +585,7 @@ export default function BodyServicePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
+              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychotherapy', color: '#4f6fd4' },
               { href: '/services/neuro', image: '/images/slide-brain.png', label: 'Brain', sub: 'QEEG, Neurofeedback & Photobiomodulation', color: '#2dd4bf' },
               { href: '/services/energy', image: '/images/slide-energy.png', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (

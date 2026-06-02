@@ -48,7 +48,7 @@ const SERVICES = [
   {
     icon: '🧠',
     title: 'Mind',
-    sub: 'Psychology & Psychotherapy',
+    sub: 'Psychotherapy',
     color: '#4f6fd4',
     lightClass: 'bg-blue-50 dark:bg-blue-950/40',
     href: '/services/mind',
@@ -169,50 +169,75 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Why Brain Imaging? ────────────────────────────────────────────── */}
+      {/* ── Brain-First Approach ──────────────────────────────────────────── */}
       <section className="py-16 bg-gradient-to-br from-[#0d1b2e] to-[#0f2a3a] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 bg-teal-400/20 text-teal-300 border border-teal-400/30">
               The Brain-First Approach
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Why Brain Imaging Changes Everything
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
+              Understanding Your Brain.
+            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#2dd4bf' }}>
+              Transforming Your Life.
             </h2>
             <p className="text-blue-200 max-w-2xl mx-auto text-sm leading-relaxed">
-              Mental health comes from how the brain functions. When the brain is not working optimally,
-              thoughts and emotions are affected. Yet most approaches never look at the brain directly.
+              Mental health is more than just symptoms. By looking at how your brain functions,
+              we uncover the root causes and create a personalised path to lasting change.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '🧬',
-                title: 'Traditional Psychiatry',
-                body: 'Relies on symptoms and labels. Assumes everyone with the same diagnosis is the same, making treatment a process of trial and error.',
+                icon: '🔀',
+                title: 'Traditional Approaches',
+                body: 'Focus on symptoms and experiences to guide treatment, often without directly measuring brain activity. This can lead to trial and error and inconsistent results.',
+                tag: 'Symptom-based, less precise',
                 accent: '#e05252',
               },
               {
                 icon: '📡',
                 title: 'QEEG Brain Mapping',
-                body: 'We measure your brain directly using Quantitative EEG, seeing exactly which regions are over- or under-active and how your unique brain is wired.',
+                body: 'We measure your brain activity using advanced QEEG technology to understand how different areas are functioning, revealing patterns linked to stress, focus, mood, and more. Objective data. Real insight.',
+                tag: 'Data-driven, objective, accurate',
                 accent: '#2dd4bf',
               },
               {
                 icon: '🎯',
-                title: 'Personalised Treatment',
-                body: 'Because every brain is different, your therapy plan is built around your actual brain data, not just your symptoms. Precision healing, not guesswork.',
+                title: 'Personalised Care',
+                body: 'Your therapy is guided by your unique brain patterns. We create a personalised plan to help you improve focus, emotional balance, resilience, and overall wellbeing, with measurable, lasting results.',
+                tag: 'Personalised, targeted, effective',
                 accent: '#fdbb2d',
               },
             ].map((card) => (
               <div
                 key={card.title}
-                className="rounded-2xl p-6 border border-white/10 bg-white/5 backdrop-blur"
+                className="rounded-2xl p-6 border border-white/10 bg-white/5 backdrop-blur flex flex-col"
                 style={{ borderTopColor: card.accent, borderTopWidth: 3 }}
               >
                 <div className="text-3xl mb-3">{card.icon}</div>
                 <h3 className="font-bold text-base mb-2" style={{ color: card.accent }}>{card.title}</h3>
-                <p className="text-sm text-blue-200 leading-relaxed">{card.body}</p>
+                <p className="text-sm text-blue-200 leading-relaxed mb-4 flex-1">{card.body}</p>
+                <div className="flex items-center gap-2 text-xs font-semibold mt-auto" style={{ color: card.accent }}>
+                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: card.accent }} />
+                  {card.tag}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-0 border-t border-white/10 pt-6">
+            {[
+              { icon: '🔍', label: 'Find the Root Cause' },
+              { icon: '📡', label: 'Understand Your Brain' },
+              { icon: '📈', label: 'Better Outcomes' },
+              { icon: '❤️', label: 'Lasting Wellbeing' },
+            ].map((item, i) => (
+              <div key={item.label} className="flex items-center gap-1">
+                {i > 0 && <span className="hidden sm:block mx-5 text-white/20">|</span>}
+                <span className="text-sm text-blue-200">{item.icon} {item.label}</span>
               </div>
             ))}
           </div>
@@ -222,7 +247,7 @@ export default function HomePage() {
               <div className="relative w-full aspect-video bg-slate-800 flex items-center justify-center">
                 <Image
                   src="/images/brainmap-comparison.jpg"
-                  alt="QEEG BrainMap comparison showing before and after neurofeedback at Neurogenetics.my"
+                  alt="QEEG BrainMap comparison: Normal vs ADHD brain at Neurogenetics.my"
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 700px"
@@ -241,13 +266,12 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold heading-underline-center text-blue-900 dark:text-blue-300">
-              The Neuro-Genetics 4D Model
+              The Integrative 4D Model
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
-              The Integrative 4D Model — Mental health is rarely driven by a single factor. This
-              framework integrates four interconnected dimensions to deliver a comprehensive view of
-              human mental wellbeing and its underlying drivers. Explore each dimension to see how
-              they dynamically interact.
+              Mental health is rarely driven by a single factor. This framework integrates four
+              interconnected dimensions to deliver a comprehensive view of human mental wellbeing
+              and its underlying drivers. Explore each dimension to see how they dynamically interact.
             </p>
           </div>
           <FourDModel />

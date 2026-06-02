@@ -358,50 +358,6 @@ export default function BrainServicePage() {
         </div>
       </section>
 
-      {/* ── Traditional vs Brain-First ────────────────────────────────────── */}
-      <section className="py-16 bg-gradient-to-br from-[#0d1b2e] to-[#0f2a3a] text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Brain-First vs Traditional Approaches</h2>
-            <p className="text-blue-200 max-w-xl mx-auto text-sm">
-              Understanding the difference between symptom-based and data-driven mental health care.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: '🔀',
-                title: 'Traditional Psychiatry',
-                body: 'Relies on reported symptoms and diagnostic labels. Treatment is trial and error. Assumes everyone with the same diagnosis needs the same approach.',
-                accent: '#e05252',
-              },
-              {
-                icon: '📡',
-                title: 'QEEG Brain Mapping',
-                body: 'Measures your actual brain activity directly. Identifies precisely which regions and networks are dysregulated, giving an objective biological picture.',
-                accent: ACCENT,
-              },
-              {
-                icon: '🎯',
-                title: 'Personalised Brain Therapy',
-                body: 'Neurofeedback and PBM protocols built around your specific brain data. Treatment targets the actual source, not just the surface symptoms.',
-                accent: '#fdbb2d',
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="rounded-2xl p-6 border border-white/10 bg-white/5 backdrop-blur"
-                style={{ borderTopColor: card.accent, borderTopWidth: 3 }}
-              >
-                <div className="text-3xl mb-3">{card.icon}</div>
-                <h3 className="font-bold text-base mb-2" style={{ color: card.accent }}>{card.title}</h3>
-                <p className="text-sm text-blue-200 leading-relaxed">{card.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── How it works ─────────────────────────────────────────────────── */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950 transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -691,7 +647,7 @@ export default function BrainServicePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychology & Psychotherapy', color: '#4f6fd4' },
+              { href: '/services/mind', image: '/images/slide-mind.png', label: 'Mind', sub: 'Psychotherapy', color: '#4f6fd4' },
               { href: '/services/body', image: '/images/slide-body.png', label: 'Body', sub: 'Functional Medicine', color: '#e05252' },
               { href: '/services/energy', image: '/images/slide-energy.png', label: 'Resonance and Frequency', sub: 'Resonance & Frequency', color: '#a855f7' },
             ].map((d) => (

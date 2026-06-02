@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Mind — Psychology & Psychotherapy | Neurogenetics.my',
+  title: 'Mind — Psychotherapy | Neurogenetics.my',
   description:
-    'Comprehensive psychological assessments and psychotherapy in Malaysia. Working at the subconscious level to uncover root causes of anxiety, depression, trauma, and emotional challenges.',
+    'Comprehensive psychotherapy in Malaysia. Working at the subconscious level to uncover root causes of anxiety, depression, trauma, and emotional challenges.',
   keywords: [
     'psychotherapy malaysia',
     'clinical hypnotherapy malaysia',
@@ -130,7 +130,7 @@ export default function MindServicePage() {
                 🧠 Dimension 01 · Mind
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 text-indigo-300">
-                Psychology &<br />Psychotherapy
+                Psychotherapy
               </h1>
               <p className="text-base font-semibold text-white/60 mb-5 tracking-wide">
                 Comprehensive Mind-Level Healing
