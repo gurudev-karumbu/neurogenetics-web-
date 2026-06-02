@@ -612,7 +612,7 @@ export default function BodyServicePage() {
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 text-white text-center bg-gradient-to-br from-red-700 to-[#1a0808]">
+      <section className="py-20 text-white text-center bg-gradient-to-br from-[#4a0c0c] to-[#0d0404]">
         <div className="max-w-2xl mx-auto px-4">
           <div className="text-4xl mb-4">🔬</div>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
