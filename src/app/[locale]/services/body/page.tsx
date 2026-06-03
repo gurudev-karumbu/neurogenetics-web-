@@ -423,33 +423,15 @@ export default function BodyServicePage() {
         </div>
       </section>
 
-      {/* ── DNA Metabolic Pathway ────────────────────────────────────────── */}
-      <section className="py-12 bg-white dark:bg-gray-900 transition-colors">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-lg font-bold mb-3 text-blue-900 dark:text-blue-300">
-            Personalised DNA Sequencing of Metabolic Pathway
-          </h3>
-          <div className="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
-            <Image
-              src="/images/dna-metabolic-pathway.jpg"
-              alt="Personalised DNA sequencing metabolic pathway chart showing dopamine, serotonin, cortisol, and neurotransmitter pathways"
-              width={1200}
-              height={900}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── Einstein quote ───────────────────────────────────────────────── */}
       <section className="py-12 bg-gray-50 dark:bg-gray-950 transition-colors">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-xl border-2 border-red-200 dark:border-red-900">
+          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/einstein-quote.jpg"
+              src="/images/einstein-quote.png"
               alt="Future medicine will be the medicine of frequencies — Albert Einstein"
               width={480}
-              height={320}
+              height={480}
               className="w-full h-auto"
             />
           </div>

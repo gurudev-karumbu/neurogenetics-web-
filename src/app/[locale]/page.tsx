@@ -246,7 +246,7 @@ export default function HomePage() {
             <div className="w-full max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-4">
               <div className="relative w-full aspect-video bg-slate-800 rounded-xl flex items-center justify-center">
                 <Image
-                  src="/images/brainmap-comparison.jpg"
+                  src="/images/brainmap-comparison.png"
                   alt="QEEG BrainMap comparison: Normal vs ADHD brain at Neurogenetics.my"
                   fill
                   className="object-contain rounded-xl"

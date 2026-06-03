@@ -223,10 +223,10 @@ export default function EnergyServicePage() {
                 style={{ borderColor: `${ACCENT}50`, boxShadow: `0 0 40px ${ACCENT}30` }}
               >
                 <Image
-                  src="/images/einstein-quote.jpg"
+                  src="/images/einstein-quote.png"
                   alt="Future Medicine will be the Medicine of Frequencies — Albert Einstein"
                   width={480}
-                  height={320}
+                  height={480}
                   className="w-full h-auto"
                 />
               </div>
